@@ -114,7 +114,9 @@ jobs:
       - name: Slack Notification - Success/Failure
         uses: act10ns/slack@v1
         with:
-          status: ${{ job.status }}
+          status: ${{ env.job_status }}
           steps: ${{ toJson(steps) }}
           channel: "#workflows"
         if: always()
+        env:
+          job_status: ${{ job.status }}
