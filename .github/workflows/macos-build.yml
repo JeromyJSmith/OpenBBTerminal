@@ -17,6 +17,7 @@ jobs:
   M1-MacOs-Build:
     name: M1 MacOS Build
     runs-on: [self-hosted, macos, ARM64]
+    timeout-minutes: 120
     steps:
       # Checkout repository main branch. this allows for the commit hashes to line up
       - name: Checkout
@@ -48,7 +49,6 @@ jobs:
           activate-environment: obb
           auto-activate-base: false
           use-only-tar-bz2: true # Needed for caching some reason
-
       - name: Install Dependencies
         shell: bash -l {0}
         run: |
@@ -170,6 +170,7 @@ jobs:
   Intel-MacOs-Build:
     name: Intel MacOS Build
     runs-on: [self-hosted, macos, x64]
+    timeout-minutes: 120
     steps:
       # Checkout repository main branch. this allows for the commit hashes to line up
       - name: Checkout
