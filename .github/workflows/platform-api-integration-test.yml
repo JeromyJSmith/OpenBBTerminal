@@ -1,7 +1,13 @@
 name: API Integration Tests
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
+    inputs:
+      wait-for-completion-timeout:
+        description: 'Timeout in minutes'
+        required: false
+        default: 60
+      
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
