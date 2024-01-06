@@ -5,7 +5,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  timeout-minutes: 20
 
 jobs:
   api-integration-tests:
@@ -26,7 +26,7 @@ jobs:
         if: always()
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Checkout specific ref
         if: github.event_name == 'pull_request'
@@ -50,7 +50,7 @@ jobs:
         run: |
           python -m venv runner_env
           source runner_env/bin/activate
-          pip install poetry toml
+          pip install PyInstaller Create-dmg NSIS
           python openbb_platform/dev_install.py -e all
 
       - name: Populate System Setting Files
