@@ -49,7 +49,7 @@ In this section we detail the steps necessary to construct an installer locally 
 ## Github
 In order to utilize the automated build workflow on the OpenBBTerminal repo, the branch in which you would like to build an installer from must already be a branch on the repo. You can also utilize the automated build workflow on a PR that is from a branch on the repo. You cannot run an automated build on a forked branch or even a PR from a forked branch.
 
-If you are using this method to create an installer, there is a limitation where only one build automation can occur at a time per workflow. For example if there is already an installer being created on the ‘Intel MacOS Build’ workflow, any subsequent requests for building will be queued. Additionally, the ‘Windows10 Build’ workflow runs relatively slowly because of the size of the EC2 instance it is currently on. As such, if you are interested in a quick build, then I would suggest building locally. Furthermore, building an installer this way also automatically runs integration tests on the installer.
+If you are using this method to create an installer, please note that the 'set-output' command is deprecated and will be disabled soon. Use Environment Files instead. Additionally, there is a limitation where only one build automation can occur at a time per workflow. For example if there is already an installer being created on the ‘Intel MacOS Build’ workflow, any subsequent requests for building will be queued. Additionally, the ‘Windows10 Build’ workflow runs relatively slowly because of the size of the EC2 instance it is currently on. As such, if you are interested in a quick build, then I would suggest building locally. Furthermore, building an installer this way also automatically runs integration tests on the installer.
 
 If you run into a circumstance where a requested build is queued for a long period of time, this might mean that the EC2 instance is not connected to github. If something like this arises, please create an issue.
 
@@ -57,9 +57,9 @@ If you run into a circumstance where a requested build is queued for a long peri
 1. Navigate to `Actions`
 2. Navigate to your desired build system workflow
 3. Choose your desired branch & click Run Workflow
-4. Download your installer artifact
+4. Please update your workflows to use Environment Files instead of the 'set-output' command. You can refer to the GitHub documentation for examples and instructions for updating the workflows.
 
-   Each build system produces a single installer which can be subsequently downloaded.
+   It is crucial to verify the correctness of the build scripts and commands. Each build system produces a single installer which can be subsequently downloaded.
 
 5. Investigate the success/failure of your Build
 
