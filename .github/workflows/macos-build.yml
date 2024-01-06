@@ -11,12 +11,16 @@ on: workflow_dispatch
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  timeout-minutes: 20
 
 jobs:
   M1-MacOs-Build:
     name: M1 MacOS Build
     runs-on: [self-hosted, macos, ARM64]
+    timeout-minutes: 20
+    steps:
+    runs-on: [self-hosted, macos, ARM64]
+    timeout-minutes: 20
     steps:
       # Checkout repository main branch. this allows for the commit hashes to line up
       - name: Checkout
@@ -53,7 +57,8 @@ jobs:
         shell: bash -l {0}
         run: |
           conda info
-          pip list
+          pip install PyInstaller Create-dmg NSIS
+          run: pip install PyInstaller Create-dmg NSIS
           build/conda/cleanup_artifacts.sh
           poetry install -E all -E installer
           pip uninstall papermill -y
@@ -61,7 +66,7 @@ jobs:
           pip list
 
       - name: Build Bundle
-        run: build/pyinstaller/build4mac.sh
+        run: PyInstaller BuildCommand
         shell: bash -l {0}
 
       - name: Creating Application Keychain
@@ -214,7 +219,7 @@ jobs:
           pip list
 
       - name: Build Bundle
-        run: build/pyinstaller/build4mac.sh
+        run: PyInstaller BuildCommand
         shell: bash -l {0}
 
       - name: Creating Application Keychain
