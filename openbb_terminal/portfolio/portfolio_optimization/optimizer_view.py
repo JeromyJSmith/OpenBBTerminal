@@ -22,6 +22,7 @@ from matplotlib.gridspec import GridSpec
 from matplotlib.lines import Line2D
 
 from openbb_terminal.config_terminal import theme
+from openbb_terminal.environment_files import write_environment_files
 
 # IMPORTS INTERNAL
 from openbb_terminal.core.session.current_user import get_current_user
@@ -32,6 +33,7 @@ from openbb_terminal.portfolio.portfolio_optimization import (
     optimizer_model,
 )
 from openbb_terminal.rich_config import console
+from openbb_terminal.environment_files import write_environment_files
 
 warnings.filterwarnings("ignore")
 
