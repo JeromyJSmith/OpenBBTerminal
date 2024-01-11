@@ -1,6 +1,6 @@
 ---
 title: tr
-description: Documentation on how to display top repositories using the GitHub API.
+documentation on how to troubleshoot and fix errors in the GitHub Actions run, including steps to identify and resolve common issues that may cause the Actions run to fail: Documentation on how to display top repositories using the GitHub API.
   Instructions include usage, parameters details, and examples. The user can sort
   the repos by stars or forks, and can filter by repo categories.
 keywords:
@@ -19,7 +19,7 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 
 <HeadTitle title="alt/oss/tr - Reference | OpenBB Terminal Docs" />
 
-Display top repositories [Source: https://api.github.com]
+Troubleshooting and Fixing GitHub Actions Run Errors [Source: https://api.github.com]
 
 ### Usage
 
@@ -29,7 +29,7 @@ tr [-s {stars,forks}] [-c CATEGORIES]
 
 ---
 
-## Parameters
+Troubleshooting Steps
 
 | Name | Description | Default | Optional | Choices |
 | ---- | ----------- | ------- | -------- | ------- |
