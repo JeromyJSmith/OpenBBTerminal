@@ -305,6 +305,7 @@ def run_test(
             special_arguments=special_arguments,
         )
         exception = None
+        return file_short_name, exception
     except Exception as e:
         _, _, exc_traceback = sys.exc_info()
         exception = {
