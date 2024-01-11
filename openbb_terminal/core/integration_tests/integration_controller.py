@@ -52,6 +52,7 @@ from openbb_terminal.terminal_controller import (
     terminal,
     handle_failure,
     update_queue,
+    call_forex
 )
 from openbb_terminal.terminal_helper import suppress_stdout
 
