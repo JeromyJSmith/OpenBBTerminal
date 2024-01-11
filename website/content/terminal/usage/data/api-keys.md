@@ -44,6 +44,12 @@ In order to set the API key in the terminal, after obtaining the correct informa
 
 ```console
 (🦋) /keys/ $ reddit -i <YOUR-CLIENT-ID> -s <YOUR-CLIENT-SECRET> -u <USERNAME> -p <PASSWORD> -a <USER-AGENT>
+  -t TOKEN, --token TOKEN
+                        Token (default: None)
+  -t TOKEN, --token TOKEN
+                        Token (default: None)
+  -t TOKEN, --token TOKEN
+                        Token (default: None)
 ```
 
 A message similar to the one below will be printed when a function requesting data from an API is called but the key has not yet been entered.
