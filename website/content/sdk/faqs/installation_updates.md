@@ -41,10 +41,10 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 <details><summary>How do I update my installation to the latest version?</summary>
 
-The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
+To update the installation, follow these steps depending on the installation type:
 
 - For a `pip` installation, when a new version is published or to fix failing GitHub Actions run: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- To update a cloned version of the GitHub repo, follow these steps:
 
 ```console
   git fetch
