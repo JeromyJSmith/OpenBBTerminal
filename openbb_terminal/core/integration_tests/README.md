@@ -14,7 +14,9 @@ The purpose of integration tests is to provide standard usage examples that can 
 to make sure that a specific functionality of the terminal and the process to utilize that functionality
 is working properly.
 
-## 2. How to build integration tests ?
+## 3. How to troubleshoot GitHub Actions run errors ?
+
+Here are the steps to troubleshoot and fix errors in the GitHub Actions run:
 
 Integration tests themselves are the same as manually running a certain series of steps. As a result,
 writing tests is easy because the integration test script is just the total list of steps necessary to
