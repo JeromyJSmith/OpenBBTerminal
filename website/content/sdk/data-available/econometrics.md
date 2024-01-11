@@ -358,6 +358,10 @@ As an example, a **Random Effects** regression is performed. This can be done as
 
 ```python
 # Perform the Random Effects regression technique
+try:
+    random_effects_regression = openbb.econometrics.re(wage_panel['lwage'], wage_panel[['black', 'hisp', 'exper', 'expersq', 'married', 'educ', 'union','year']])
+except Exception as e:
+    print('An error occurred:', e)
 random_effects_regression = openbb.econometrics.re(wage_panel['lwage'], wage_panel[['black', 'hisp', 'exper', 'expersq', 'married', 'educ', 'union','year']])
 
 # Show the results
