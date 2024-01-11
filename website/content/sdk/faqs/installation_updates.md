@@ -1,11 +1,11 @@
 ---
 title: Installation and Updates
 sidebar_position: 1
-description: This page provides detailed instructions for the installation and updating
+description: This page provides detailed instructions for the installation and troubleshooting updating, and handling conflicts when pulling changes from the main branch
   processes for software, addressing frequently encountered installation issues. These
   instructions include resolving Microsoft Visual C++ 14.0 dependencies, benefits
   of using Miniconda for package management, methods to update installations, and
-  solutions for other common installation errors.
+  solutions for common installation errors and handling conflicts when pulling changes from the main branch.
 keywords:
 - Installation
 - Updates
@@ -15,7 +15,7 @@ keywords:
 - PyPi Nightly
 - C++ Build Tools
 - Homebrew
-- bt wheel build failure
+- bt wheel build and handling conflicts
 - ARM/Linux Raspberry Pi machines
 ---
 
@@ -48,8 +48,8 @@ The code is constantly being updated with new features and bug fixes. The proces
 
 ```console
   git fetch
-  git pull
-  poetry install -E all
+  git pull origin main
+  poetry update
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
