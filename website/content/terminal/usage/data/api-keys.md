@@ -341,7 +341,9 @@ Click on, "Get free api key", to open the page:
 
 ![Finnhub](https://user-images.githubusercontent.com/46355364/207832185-f4c8406a-3b75-4acc-b3e8-3c4b3272d4da.png)
 
-Once the account has been created, find the API key in the account dashboard.
+After creating the account, find the API key in the account dashboard. Add this key to the OpenBB Terminal by entering:
+
+```console
 
 ![Finnhub](https://user-images.githubusercontent.com/46355364/207832601-62007d95-410c-4d03-a5a3-b177d1894a4c.png)
 
@@ -430,7 +432,7 @@ Select, "New GitHub App":
 
 ![GitHub](https://user-images.githubusercontent.com/46355364/207847383-d24416c6-18be-43f2-ae7c-455e8372a6ed.png)
 
-After creating the app, the key will be issued. Enter this token into the OpenBB Terminal with:
+After creating the app, the key will be issued. Enter this API key into the OpenBB Terminal with:
 
 ```console
 /keys/github REPLACE_WITH_KEY
