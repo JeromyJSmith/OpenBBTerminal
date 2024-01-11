@@ -460,7 +460,7 @@ After creating an account, navigate to the [account settings](https://studio.gla
 Enter this key in the OpenBB terminal with:
 
 ```console
-/keys/glassnode REPLACE_WITH_KEY
+/keys/glassnode REPLACE_WITH_KEY_GHA_GHA
 ```
 
 </details>
@@ -824,7 +824,7 @@ Go to: https://ultimainsights.ai/openbb
 Click on the "Get started" button for Ultima Pro or "Just Want the API Key" to get an Ultima API key for yout OpenBB account. Once you sign-up and confirm you want to start a trial with Ultima, Copy the API key to your clipboard and enter this key into the OpenBB Terminal with:
 
 ```console
-/keys/ultima REPLACE_WITH_KEY
+/tmp/cache/repos/JeromyJSmith/OpenBBTerminal/4a34ef125c7054c368c6aa5af93859430ef6c215b3ca0139421c6b8e9d78f42d/develop/website/content/terminal/usage/data/api-keys.mdtima REPLACE_WITH_KEY
 ```
 
 </details>
