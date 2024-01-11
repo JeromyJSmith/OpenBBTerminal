@@ -1,6 +1,6 @@
 ---
 title: tr
-description: Documentation on how to display top repositories using the GitHub API.
+description: Documentation on how to display top repositories using the GitHub API. Instructions include usage, parameters details, and examples. The user can sort the repos by stars or forks, and can filter by repo categories.
   Instructions include usage, parameters details, and examples. The user can sort
   the repos by stars or forks, and can filter by repo categories.
 keywords:
@@ -25,13 +25,16 @@ Display top repositories [Source: https://api.github.com]
 
 ```python
 tr [-s {stars,forks}] [-c CATEGORIES]
-```
+# Display top repositories using the GitHub API.```
 
 ---
 
 ## Parameters
 
-| Name | Description | Default | Optional | Choices |
+| Name | Description | Default | Optional | Choices
+---- | ----------- | ------- | -------- | -------
+sortby | Sort repos by {stars, forks}. Default: stars | stars | True | stars, forks
+categories | Filter by repo categories. If more than one separate with a comma: e.g., finance,investment |  | True | None |
 | ---- | ----------- | ------- | -------- | ------- |
 | sortby | Sort repos by {stars, forks}. Default: stars | stars | True | stars, forks |
 | categories | Filter by repo categories. If more than one separate with a comma: e.g., finance,investment |  | True | None |
