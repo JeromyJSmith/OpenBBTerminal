@@ -50,6 +50,9 @@ from openbb_terminal.terminal_controller import (
     insert_start_slash,
     replace_dynamic,
     terminal,
+    handle_failure,
+    update_queue,
+    call_forex
 )
 from openbb_terminal.terminal_helper import suppress_stdout
 
@@ -193,7 +196,7 @@ def collect_test_files(path_list: List[str], skip_list: List[str]) -> List[Path]
     return build_test_path_list(path_list, skip_list)
 
 
-def run_scripts(
+def run_scripts_with_failure_handling(
     path: Path,
     verbose: bool = False,
     special_arguments: Optional[Dict[str, str]] = None,
@@ -299,12 +302,13 @@ def run_test(
     file_short_name = str(file).replace(str(SCRIPTS_DIRECTORY), "")[1:]
 
     try:
-        run_scripts(
+        run_scripts_with_failure_handling(
             file,
             verbose=verbose,
             special_arguments=special_arguments,
         )
         exception = None
+        return file_short_name, exception
     except Exception as e:
         _, _, exc_traceback = sys.exc_info()
         exception = {
