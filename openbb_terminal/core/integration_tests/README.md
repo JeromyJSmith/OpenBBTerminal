@@ -223,22 +223,30 @@ To run the tests on installers you can use the same syntax as above, just substi
 
 ## 4. Test report
 
-The console report has 3 sections: progress, failures, and summary.
+The console reports consists of three main sections: progress, failures, and summary. These sections provide vital feedback and information about the integration test session.
 
 - Progress
+    1. The progress section shows the tests collected and skipped in the current session.
+    2. It informs whether the tests are running in parallel or sequentially.
+    3. It displays the result of tests that have already finished.
     1. Shows the tests collected and skipped in the current session
     2. Informs if tests are running in parallel or sequentially
     3. Displays the result of tests already finished
 
 - Failures
+    1. The failures section provides the traceback for failed tests.
+    2. It includes the exception type that caused the failure.
+    3. It provides detailed information with the exception message.
     1. Traceback
     2. Exception type
     3. Detail with exception message
 
 - Summary
+    1. The summary section displays the tests that failed with the last command called and how long they took to run.
     1. Displays tests failed with the last command called and how long they took to run
 
-- Example
+- Examples
+    1. Example of running integration tests with different options: List available tests, run all tests, run some tests, run one test, skip some tests, run tests with arguments, get possible keys, save time by running tests in parallel, show terminal outputs, run tests sequentially, handle verbose mode, and force displaying test results in order. Each example is followed by the command and its description.
 
 ```zsh
 (obb) % python terminal.py -t forex
@@ -290,7 +298,7 @@ Exception type: ZeroDivisionError
 Detail: division by zero
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-================================ integration test summary ================================
-FAILED forex/test_forex_qa.openbb -> command: qa
+=The Test Summary section provides an overview of the test results, highlighting the number of tests failed and passed, along with the time taken for the tests to run. Each test failure is preceded by the test name, the command, and the type of failure.=
+FAILED forex/test_forex_qa.openbb -> command -> qa
 ============================== 1 failed, 6 passed in 8.88s ===============================
 ```
