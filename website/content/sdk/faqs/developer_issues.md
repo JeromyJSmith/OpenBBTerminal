@@ -58,7 +58,14 @@ Branches must also follow the naming convention:
 
 </details>
 
-<details><summary>Error: "git pull" fails because of a hot fix: cannot lock ref</summary>
+<details><summary>Error: "git pull
+
+If the error message looks something like:```console
+cannot lock ref: 'refs/remotes/origin/hotfix' exists; cannot create
+```Try:```console
+git remote prune origin
+git pull
+```" fails because of a hot fix: cannot lock ref</summary>
 
 If the error message looks something like:
 

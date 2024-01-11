@@ -25,7 +25,7 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again. If the error message is 'Microsoft Visual C++ 14.0 or greater is required', please ensure that the C++ Build Tools are properly installed and included in the system PATH to resolve this issue.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
@@ -78,7 +78,7 @@ There may be an additional message that is printed from this error, stating: "Mi
 
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+If you encounter the error 'failed building wheel for bt', it may be due to the absence of a C++ compiler. Install Homebrew with the following commands to resolve this issue:
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -107,7 +107,7 @@ Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/
 
 <details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
 
-This error is resolved by installing libomp from Homebrew:
+To resolve the error 'Library not loaded: /usr/local/opt/libomp/lib/libomp.dylib', you can install libomp from Homebrew using the following command:
 
 ```console
 brew install libomp
