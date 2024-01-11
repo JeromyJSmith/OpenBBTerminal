@@ -15,6 +15,7 @@ keywords:
 - Homebrew installation
 - libomp
 - Conda installation issue
+- Handling conflicts when pulling changes from the main branch
 ---
 
 import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
@@ -78,7 +79,26 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/f8aef8fc-a080-4164-bd36-460714ec44f3)
 
 </details>
+<details><summary>Error: failed building wheel for bt</summary>
 
+There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
+
+Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
+Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then run:
+
+```console
+brew install gcc
+brew install cmake
+```
+
+</details>
 <details><summary>Error: failed building wheel for bt</summary>
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
