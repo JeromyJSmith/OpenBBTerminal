@@ -50,6 +50,8 @@ from openbb_terminal.terminal_controller import (
     insert_start_slash,
     replace_dynamic,
     terminal,
+    handle_failure,
+    update_queue,
 )
 from openbb_terminal.terminal_helper import suppress_stdout
 
