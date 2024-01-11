@@ -43,8 +43,8 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- For a `pip` installation, when a new version is published: `pip install openbb-terminal[all]`
+- To upgrade a cloned version of the GitHub repo, follow these steps::
 
 ```console
 git fetch
@@ -52,7 +52,7 @@ git pull
 poetry install -E all
 ```
 
-**Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
+**Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If you have made local changes to the files that conflict with the incoming changes from GitHub, consider stashing them before pulling from the main branch using `git stash`.
 
 </details>
 
@@ -61,7 +61,7 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
