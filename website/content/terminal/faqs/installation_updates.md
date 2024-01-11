@@ -71,7 +71,7 @@ pip install openbb-terminal-nightly[all]
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again. If the error message is 'Microsoft Visual C++ 14.0 or greater is required', please ensure that the C++ Build Tools are properly installed and included in the system PATH to resolve this issue.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
