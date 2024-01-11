@@ -49,6 +49,10 @@ To switch to the develop branch:
 git checkout develop
 ```
 
+```console
+git checkout develop
+```
+
 Branches must also follow the naming convention:
 
 - /feature/name_your_branch
