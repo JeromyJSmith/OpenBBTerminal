@@ -97,7 +97,19 @@ Just removing the 'artifacts' folder could also be enough:
 When you try to add a package to Poetry it is possible that it causes a similar issue. Here you can remove the
 'artifacts' folder again to reinitialize Poetry.
 
-If you run into trouble with Poetry, and the advice above did not help, your best bet is to try
+If you run into trouble with Poetry, and the advice above did not help, your best bet is to try to reset your cache and proceed as follows:
+```bash
+poetry update --lock
+cache deactivate -> conda activate obb
+cache rm -r .
+cache reset --hard
+``` to reset your cache and proceed as follows:
+```bash
+poetry update --lock
+cache deactivate -> conda activate obb
+cache rm -r .
+cache reset --hard
+```
 
 - `poetry update --lock`
 - `conda deactivate` -> `conda activate obb`, then try again
@@ -148,7 +160,15 @@ It is possible that CRLF automatically turns back on, you can correct this with:
 git config --global core.autocrlf false
 ```
 
-In case you already made coding adjustments, you have to reset your cache, and the changes you made to the code with
+In case you already made coding adjustments, you have to reset your cache and the changes you made to the code with the following:
+```bash
+git rm --cached -r .
+git reset --hard
+```
+```bash
+git rm --cached -r .
+git reset --hard
+```
 the following:
 
 ```bash
