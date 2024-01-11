@@ -1,11 +1,11 @@
 ---
 title: tr
-documentation on how to troubleshoot and fix errors in the GitHub Actions run, including steps to identify and resolve common issues that may cause the Actions run to fail. This includes: 
-1. Check the workflow file for syntax errors, typos, and required fields. Verify that the YAML syntax is correct and all necessary fields are properly configured in the workflow file.
+documentation on how to troubleshoot and fix errors in the installation, including steps to identify and resolve common issues that may cause the run to fail. This includes: 
+1. Check the installation file for syntax errors, typos, and required fields. Verify that the YAML syntax is correct and all necessary fields are properly configured in the installation file.
 2. Review the log output for error messages that provide clues about the cause of the failure. Search for specific error codes or messages that can be researched to identify the cause of the failure.
 3. Verify that the required environment variables and secrets are properly configured. Ensure that they are accessible and correctly set up in the GitHub repository settings to avoid issues with environment variable and secret accessibility.
-4. Double-check the dependencies and versions used in the workflow. Ensure that the correct versions of tools, packages, and libraries are being used to prevent issues related to dependencies and versions.
-5. Test the workflow locally using the GitHub Actions CLI to replicate the environment and debug the run. This can help identify issues that may be specific to the GitHub Actions environment and assist in debugging the workflow.
+4. Double-check the dependencies and versions used in the installation. Ensure that the correct versions of tools, packages, and libraries are being used to prevent issues related to dependencies and versions.
+5. Test the installation locally to replicate the environment and debug the run. This can help identify issues that may be specific to the environment and assist in debugging the installation.
 6. If the error is related to external services or dependencies, verify the availability and connectivity of external services such as package registries and API endpoints to resolve issues related to external dependencies.
 7. Reach out to the maintainers or community for support if the issue is not resolved. Provide detailed information about the failure and the troubleshooting steps taken so far.
 <br>Documentation on how to display top repositories using the GitHub API.
@@ -46,7 +46,7 @@ curl https://api.github.com/repos | tr -s stars -c finance,investment
 
 ---
 
-Troubleshooting Steps
+Installation and Troubleshooting Steps
 
 | Name | Description | Default | Optional | Choices |
 | ---- | ----------- | ------- | -------- | ------- |
