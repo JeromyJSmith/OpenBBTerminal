@@ -63,13 +63,15 @@ Dates should be entered as a string variable, inside of quotation marks, formatt
 
 <details><summary>Does the portfolio menu allow for dividends, interest, or other distributions?</summary>
 
-Currently, this is only possible by manually updating the portfolio file.
+Currently, the portfolio menu does not support dividends, interest, or other distributions, and manual updates are required.
 
 </details>
 
 <details><summary>Why does my Portfolio file fail to load?</summary>
 
-This can be the result of a formatting error, check the file in a simple text editor to observe any abnormalities in the formatting; or, it could be a bug - check the [GitHub issues page](https://github.com/OpenBB-finance/OpenBBTerminal/issues) for similar errors.
+Troubleshooting tips for failed portfolio file loading:
+- Check the file in a simple text editor to observe any abnormalities in the formatting.
+- Check the [GitHub issues page](https://github.com/OpenBB-finance/OpenBBTerminal/issues) for similar errors.
 
 - Check that all the necessary column titles are present.
 - Inspect the file to see if cells left blank have been filled unintentionally with 0 or NaN values.
