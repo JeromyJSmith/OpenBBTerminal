@@ -16,16 +16,16 @@ is working properly.
 
 ## 3. How to troubleshoot GitHub Actions run errors ?
 
-Here are the steps to troubleshoot and fix errors in the GitHub Actions run:
+Here are the steps to troubleshoot and fix errors in the GitHub Actions run and during integration testing:
 
 Integration tests themselves are the same as manually running a certain series of steps. As a result,
 writing tests is easy because the integration test script is just the total list of steps necessary to
 use a command, command with specific argument, or series of commands.
 
 When you contribute a new feature to the Terminal, it's important that integration tests are added for
-this particular feature. It is a part of the Checklist for the PR to be approved.
+this particular feature. Adding integration tests for new features is a critical step in the Checklist for the PR to be approved to ensure robustness and functionality.
 
-All the `integration tests` should be insides the `scripts` folder. The naming convention for scripts
+All the `integration tests` should be inside the `scripts` folder to ensure proper organization and execution. The naming convention for scripts
 should be `test_<menu>_<command>.openbb` if you are testing a specific command or `test_<menu>.openbb`
 if you are testing the entire menu. However, it is encouraged to create as specific of integration tests
 as possible to identify errors more precisely. Additionally, all tests must end with the `exit` command.
@@ -38,7 +38,9 @@ argument MUST contain a key and a default value.
 
 When an unhandled exception is raised during a test session, this is considered a bug. The exception is caught and we save its traceback and other details to debug afterwards.
 
-### Script examples
+### Guidelines for Writing Integration Tests
+
+Now, let's provide guidelines for writing integration tests and dynamic outputs in the following section:
 
 Testing a specific command and it's arguments:
 
