@@ -223,7 +223,7 @@ To run the tests on installers you can use the same syntax as above, just substi
 
 ## 4. Test report
 
-The console report has 3 sections: progress, failures and summary.
+The console report has 3 sections: progress, failures, and summary.
 
 - Progress
     1. Shows the tests collected and skipped in the current session

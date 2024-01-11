@@ -43,7 +43,7 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
@@ -61,7 +61,9 @@ poetry install -E all && python fix-gha-failure.py
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly[all] 
+
+**Note**: This version may not be stable and should not be used in a production setting.
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
