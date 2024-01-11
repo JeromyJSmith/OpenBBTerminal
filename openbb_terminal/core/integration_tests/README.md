@@ -14,16 +14,16 @@ The purpose of integration tests is to provide standard usage examples that can 
 to make sure that a specific functionality of the terminal and the process to utilize that functionality
 is working properly.
 
-## 3. How to troubleshoot GitHub Actions run errors ?
+## 3. How to troubleshoot and fix errors during integration testing ?
 
 Here are the steps to troubleshoot and fix errors in the GitHub Actions run and during integration testing:
 
 Integration tests themselves are the same as manually running a certain series of steps. As a result,
-writing tests is easy because the integration test script is just the total list of steps necessary to
+troubleshooting and fixing errors during integration testing involves analyzing the failed tests and identifying the causes. This requires
 use a command, command with specific argument, or series of commands.
 
 When you contribute a new feature to the Terminal, it's important that integration tests are added for
-this particular feature. Adding integration tests for new features is a critical step in the Checklist for the PR to be approved to ensure robustness and functionality.
+this particular feature. Ensuring that integration tests are added for new features is a critical step in the Checklist for the PR to be approved to ensure robustness and functionality. Additionally, the process for adding new integration tests for a specific feature is outlined below.
 
 All the `integration tests` should be inside the `scripts` folder to ensure proper organization and execution. The naming convention for scripts
 should be `test_<menu>_<command>.openbb` if you are testing a specific command or `test_<menu>.openbb`
@@ -164,7 +164,7 @@ the tests.
     python terminal.py -t forex --subproc 4
     ```
 
-- To have a more responsive console output we run the tests in parallel and return the
+- To view more information in the console output, tests are run in parallel and the
   output of each script as soon as it is ready. This means that test results might not
   be displayed in the same order as they were started. To force displaying tests results
   in the order they start, use the option `--ordered`:
@@ -186,7 +186,7 @@ the tests.
     python terminal.py -t --subproc 0
     ```
 
-- Enabling verbose mode and running scripts in several processes will mix the output
+- In case of an error, reviewing the verbose mode output and examining the failed test scripts will help in
   each script in the console. In this case it is advisable to run tests with the option
   `--subproc 0`, this will run the tests sequentially. It will be slower, but the outputs
   of each test will not be mixed up.
