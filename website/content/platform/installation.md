@@ -43,7 +43,23 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 Most systems capable of running Python 3.8-3.11 will be compatible with the OpenBB Platform. A modern processor (five years or less), running an up-to-date operating system, with at least 4GB of RAM, is recommended. Maintaining the system with current patches ensures maximum compatibility. At a minimum, Windows and macOS should be:
 
 - Windows 10
-- Mac OS Big Sur
+## 4. How to troubleshoot and fix GitHub Actions run errors ?
+
+Here are the steps to troubleshoot and fix errors in the GitHub Actions run:
+
+1. Check the workflow file for syntax errors and typos. Ensure that the YAML syntax is correct and that all required fields are properly configured.
+
+2. Review the log output for error messages that provide clues about the cause of the failure. Look for specific error codes or messages that can be researched.
+
+3. Verify that the required environment variables and secrets are properly configured. Ensure that they are accessible and correctly set up in the GitHub repository settings.
+
+4. Double-check the dependencies and versions used in the workflow. Make sure that the correct versions of tools, packages, and libraries are being used.
+
+5. Test the workflow locally using the GitHub Actions CLI to replicate the environment and debug the run. This can help identify issues that may be specific to the GitHub Actions environment.
+
+6. If the error is related to external services or dependencies, such as package registries or API endpoints, verify their availability and connectivity.
+
+7. Reach out to the maintainers or community for support if the issue is not resolved. Provide detailed information about the failure and the troubleshooting steps taken so far.
 
 Linux users should run the command line update for the package manager, prior to installation.
 
