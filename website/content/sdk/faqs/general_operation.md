@@ -57,7 +57,7 @@ Do note that it is also possible that the menu or command has been deprecated. I
 
 <details><summary>What is the correct format for entering dates to function variables?</summary>
 
-Dates should be entered as a string variable, inside of quotation marks, formatted as `%Y-%m-%d` - YYYY-MM-DD.
+Dates should be entered as a string variable, inside of quotation marks, formatted as `YYYY-MM-DD`.
 
 </details>
 
@@ -78,7 +78,6 @@ This can be the result of a formatting error, check the file in a simple text ed
 - All dates must be entered as YYYY-MM-DD.
 - Transactions dated for today will fail to load historical data.
 - MacOS users should attempt to avoid using the Numbers application as it has a habit of changing the formatting while saving.
-
 Files can be formatted as either `.csv` or `.xlsx` files, and the required column headers are:
 
 `[Date,Type,Ticker,Side,Price,Quantity,Fees,Investment,Currency,Sector,Industry,Country,Region]`

@@ -46,7 +46,7 @@ The terminal is constantly being updated with new features and bug fixes. The pr
 
 - As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
 - For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published: `pip install -U openbb`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console

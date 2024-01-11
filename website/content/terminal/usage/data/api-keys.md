@@ -422,7 +422,7 @@ Go to: https://github.com
 
 ![GitHub](https://user-images.githubusercontent.com/46355364/207846953-7feae777-3c3b-4f21-9dcf-84817c732618.png)
 
-Sign up for, or sign in to, GitHub. Once logged in, navigate to the [apps](https://github.com/settings/apps) page, under account settings.
+Sign up for, or sign in to, GitHub. Once logged in, navigate to the [apps](https://www.github.com/apps) page, under account settings.
 
 ![GitHub](https://user-images.githubusercontent.com/46355364/207847215-3c04003f-26ea-4e62-9c13-ea35176bb5e3.png)
 
@@ -714,7 +714,7 @@ Click on, "Sign up", and register for an account.
 
 ![Santiment](https://user-images.githubusercontent.com/46355364/207849732-4bae61de-2f62-4919-b85d-f418f1bbd0c4.png)
 
-Navigate to the [account dashboard](https://app.santiment.net/account#api-keys) and generate a key.
+Navigate to the [account dashboard](https://www.github.com/apps) and generate a key.
 
 ![Santiment](https://user-images.githubusercontent.com/46355364/207849839-31d1d0a7-6936-4ebd-a7f8-1292f6317b07.png)
 
