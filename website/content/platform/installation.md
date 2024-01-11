@@ -133,21 +133,23 @@ pip install openbb-core && pip install openbb --no-deps
 
 ### Docker
 
-OpenBB provides a `.dockerfile` on [GitHub](https://github.com/OpenBB-finance/OpenBBTerminal).
+### Building and Running with Docker
 
-Run the following command from the repo root to build the image:
+To build and run the OpenBB platform using Docker, follow the commands below.
 
 ```bash
+# Build the Docker image
 docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 ```
 
-To run it:
-
 ```bash
-docker run --rm -p 8000:8000 -v ~/.openbb_platform:/root/.openbb_platform openbb-platform:latest
+# Run the Docker container
+sudo docker run --rm -p 8000:8000 -v ~/.openbb_platform:/root/.openbb_platform openbb-platform:latest
 ```
 
-This will mount the local `~/.openbb_platform` directory into the Docker container to use with the API keys and preferences from there, and it will expose the API on port `8000`.
+These commands will build the Docker image and run the container, respectively.
+
+For more detailed instructions, refer to the [OpenBB repository](https://github.com/OpenBB-finance/OpenBBTerminal).
 
 ### Source
 
