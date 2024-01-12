@@ -59,7 +59,13 @@ A message similar to the one below will be printed when a function requesting da
 If the failing GitHub Actions run is related to the API_FINNHUB_KEY, ensure the key is defined in the ~/.openbb_terminal/.env file.
 :::
 
-API_FINNHUB_KEY not defined. Set API Keys in ~/.openbb_terminal/.env or under keys menu.
+API_FINNHUB_KEY not defined. Set API Keys in ~/.openbb_terminal/.env or under keys menu. If the failing GitHub Actions run is related to the API_FINNHUB_KEY, ensure the key is defined in the ~/.openbb_terminal/.env file.
+
+After obtaining the API key, define it in the `.env` file using the syntax:
+
+```console
+API_FINNHUB_KEY=YOUR_API_KEY
+```
 ```
 
 The menu also provides a method for testing the validity of a key upon entry. It can be easy to copy & paste the string with a missing character; so, if the test fails, check that the values were correctly recorded with the command:
@@ -93,7 +99,7 @@ Go to: https://www.alphavantage.co/support/#api-key
 Fill out the form, pass Captcha, and click on, "GET FREE API KEY". The issued key can be entered into the OpenBB Terminal with:
 
 ```console
-/keys/av REPLACE_WITH_KEY
+/keys/av -k REPLACE_WITH_KEY
 ```
 
 </details>
