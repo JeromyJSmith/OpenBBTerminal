@@ -236,6 +236,14 @@ The console report has 3 sections: progress, failures and summary.
     3. Detail with exception message
 
 - Summary
+    
+      If the GitHub Actions run fails, review the error logs that are provided in the GitHub Actions tab. Look for any specific errors or exceptions that may have caused the failure. After identifying the root cause, make the necessary code changes or fixes in the corresponding files and push the changes to the repository. Ensure that the changes are tested locally before pushing to the main branch.
+
+      Please refer to the file:
+            - `website/content/sdk/faqs/developer_issues.md`
+      and the entity:
+            - `python terminal.py`
+      for additional information and steps to fix the issue.
     1. Displays tests failed with the last command called and how long they took to run
 
 - Example
