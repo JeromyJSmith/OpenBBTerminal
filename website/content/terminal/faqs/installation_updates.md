@@ -1,7 +1,7 @@
 ---
 title: Installation and Updates
 sidebar_position: 1
-description: This page provides comprehensive insights about installing and updating
+description: This page provides comprehensive insights about installing and updating the OpenBB Terminal. It also includes detailed instructions on how to fix a failing GitHub Actions run during the installation process.
   the OpenBB Terminal. It discusses system requirements, installation process, common
   errors and their solutions. Information about updating the OpenBB Terminal through
   different methods is also covered.
@@ -46,7 +46,7 @@ The terminal is constantly being updated with new features and bug fixes. The pr
 
 - As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
 - For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published, run the following command to update the SDK: `pip install -U openbb[all]` and fix any failing GitHub Actions run.
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
@@ -55,7 +55,7 @@ git pull
 poetry install -E all
 ```
 
-**Notes:** If the cloned repository is a fork, pull from: `git pull origin main` or `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
+**Notes:** If the cloned repository is a fork, pull from: `git pull origin main` or `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`. Also, update any necessary files or dependencies that may be causing the failing GitHub Actions run.
 
 </details>
 

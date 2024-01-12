@@ -13,6 +13,10 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 
 <HeadTitle title="API Keys - Data - Usage | OpenBB Terminal Docs" />
 
+:::tip
+If the failing GitHub Actions run is related to the API keys, ensure that the correct API keys are used and follow the steps below to obtain and use the API keys from the data vendor's website.
+:::
+
 API (Application Programming Interface) keys are access credentials for obtaining data from a particular data vendor. They are a string of random characters assigned, by the data provider, to an individual account.
 
 ## Setting API keys through Terminal
@@ -50,6 +54,10 @@ A message similar to the one below will be printed when a function requesting da
 
 ```console
 (🦋) /stocks/fa/ $ rot
+
+:::info
+If the failing GitHub Actions run is related to the API_FINNHUB_KEY, ensure the key is defined in the ~/.openbb_terminal/.env file.
+:::
 
 API_FINNHUB_KEY not defined. Set API Keys in ~/.openbb_terminal/.env or under keys menu.
 ```
@@ -557,6 +565,8 @@ Upon completion of the account setup, enter the credentials into the OpenBB Term
 
 ```console
 /keys/oanda -a REPLACE_WITH_ACCOUNT -t REPLACE_WITH_TOKEN --account_type REPLACE_WITH_LIVE_OR_PRACTICE
+
+# If the GitHub Actions run is failing, ensure that the proper API key is entered by executing the following command. Make sure there are no issues with the API key entry.
 ```
 
 </details>
@@ -676,6 +686,8 @@ After submitting the form, check for a confirmation email. The credentials will 
 
 ```console
 /keys/reddit -i REPLACE_WITH_CLIENT_ID -s REPLACE_WITH_CLIENT_SECRET -u REPLACE_WITH_REDDIT_USERNAME -p REPLACE_WITH_REDDIT_PASSWORD -a REPLACE_WITH_USER_AGENT
+
+# If the GitHub Actions run is failing, ensure that the proper API key is entered by executing the following command. Make sure there are no issues with the API key entry.
 ```
 
 </details>
