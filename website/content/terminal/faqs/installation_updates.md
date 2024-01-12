@@ -44,9 +44,9 @@ The OpenBB Terminal installation packages are compatible with:
 
 The terminal is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
-- For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published, run the following command to update the SDK: `pip install -U openbb[all]` and fix any failing GitHub Actions run.
+- For Windows installer, ensure to uninstall the existing version prior to updating to the latest one.
+- For other installer versions, uninstall the previous version (e.g., use the uninstall.exe on Windows or delete the Application folder on MacOS), then download the latest version and reinstall. User settings and data will remain.
+- For a `pip` installation, when a new version is published, run the following command to update the SDK: `pip install -U openbb[all]` and address any failing GitHub Actions runs.
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
@@ -67,7 +67,7 @@ The nightly build can be installed with:
 pip install openbb-terminal-nightly[all]
 ```
 
-**Note**: This version may not be stable and should not be used in a production setting.
+**Note**: Note: This version may not be stable and should not be used in a production setting.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
