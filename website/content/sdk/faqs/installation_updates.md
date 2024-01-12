@@ -50,6 +50,9 @@ The code is constantly being updated with new features and bug fixes. The proces
 git fetch
 git pull
 poetry install -E all
+
+# Fix failing GitHub Actions run
+# Add the specific command to fix the failing GitHub Actions run here
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -75,6 +78,8 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 <details><summary>Error: failed building wheel for bt</summary>
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
+
+# Note: Make sure to modify any necessary files or dependencies during the update process
 
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
