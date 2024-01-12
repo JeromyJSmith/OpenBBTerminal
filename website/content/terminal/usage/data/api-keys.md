@@ -292,7 +292,7 @@ Go to: https://www.degiro.com/
 Click on, "Open an account", and then go through the registration process. After setting up the account, the login credentials can be entered in the OpenBB Terminal with:
 
 ```console
-/keys/degiro -u USERNAME -p PASSWORD
+/keys/degiro -u REPLACE_WITH_USERNAME -p REPLACE_WITH_PASSWORD
 ```
 
 Instructions for setting up 2FA authorization are [here](https://github.com/Chavithra/degiro-connector#35-how-to-use-2fa-).
