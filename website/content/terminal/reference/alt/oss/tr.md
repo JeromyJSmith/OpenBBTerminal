@@ -1,9 +1,18 @@
 ---
-title: tr
-description: Documentation on how to display top repositories using the GitHub API.
+title: Top Repositories
+description: Documentation on how to display top repositories using the GitHub API to sort and filter while displaying repository details. Instructions include usage, parameters details, and examples. Users can sort the repositories by stars or forks, and filter them by repository categories.
   Instructions include usage, parameters details, and examples. The user can sort
   the repos by stars or forks, and can filter by repo categories.
 keywords:
+- top repositories
+- github api
+- parameters
+- stars
+- forks
+- repo categories
+- filter
+- sort
+- usage
 - top repositories
 - github api
 - parameters
