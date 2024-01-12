@@ -85,7 +85,7 @@ Go to: https://www.alphavantage.co/support/#api-key
 Fill out the form, pass Captcha, and click on, "GET FREE API KEY". The issued key can be entered into the OpenBB Terminal with:
 
 ```console
-/keys/av REPLACE_WITH_KEY
+/keys/av {ALPHA_VANTAGE_KEY}
 ```
 
 </details>
@@ -104,7 +104,7 @@ Go to: https://www.binance.com/en/support/faq/how-to-create-api-360002502072
 These instructions should provide clear guidance for obtaining an API Key. Enter the issued credentials into the OpenBB Terminal with:
 
 ```console
-/keys/binance -k REPLACE_WITH_KEY -s REPLACE_WITH_SECRET
+/keys/binance -k {BINANCE_KEY} -s {BINANCE_SECRET}
 ```
 
 </details>
@@ -460,7 +460,7 @@ After creating an account, navigate to the [account settings](https://studio.gla
 Enter this key in the OpenBB terminal with:
 
 ```console
-/keys/glassnode REPLACE_WITH_KEY
+/keys/glassnode {GLASSNODE_KEY}
 ```
 
 </details>
@@ -556,7 +556,7 @@ After creating an account, follow the steps below.
 Upon completion of the account setup, enter the credentials into the OpenBB Terminal using the syntax:
 
 ```console
-/keys/oanda -a REPLACE_WITH_ACCOUNT -t REPLACE_WITH_TOKEN --account_type REPLACE_WITH_LIVE_OR_PRACTICE
+/keys/oanda -a {OANDA_ACCOUNT} -t {OANDA_TOKEN} --account_type {OANDA_ACCOUNT_TYPE}
 ```
 
 </details>
@@ -587,7 +587,7 @@ Click `View API Keys`. This will take you to the api Keys menu. Then click `Crea
 Then enter the Secret key credentials into the OpenBB Terminal using the syntax:
 
 ```console
-/keys/openai -k <OPENAI API KEY>
+/keys/openai -k {OPENAI_KEY}
 ```
 
 </details>
@@ -851,7 +851,7 @@ After creating the account, click on, "Create", to issue the API Key.
 Enter the key into the OpenBB Terminal by typing:
 
 ```console
-/keys/walert REPLACE_WITH_KEY
+/keys/walert {WHALE_ALERT_KEY}
 ```
 
 </details>
