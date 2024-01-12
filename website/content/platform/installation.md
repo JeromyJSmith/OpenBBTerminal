@@ -68,7 +68,7 @@ Installing packages directly to the system Python or `base` environment is not r
 
 ```bash
 conda create -n openbb python=3.11
-conda activate openbb
+docker run --rm -p 8000:8000 -v ~/.openbb_platform:/root/.openbb_platform openbb-platform:latest
 ```
 
 :::
