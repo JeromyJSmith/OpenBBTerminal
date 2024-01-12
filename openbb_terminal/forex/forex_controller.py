@@ -2,7 +2,7 @@
 
 
 
-from typing import List, Optional
+
 from openbb_terminal.decorators import check_api_key, log_start_end
 from openbb_terminal.forex import forex_helper
 from datetime import datetime, timedelta
