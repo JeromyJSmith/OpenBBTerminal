@@ -8,6 +8,8 @@ import warnings
 from typing import Optional
 
 import whisper
+import whisper
+import yt_dlp
 
 import yt_dlp
 
