@@ -45,6 +45,12 @@ The code is constantly being updated with new features and bug fixes. The proces
 
 - For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
+```console
+git fetch
+# Added command to fix failing GitHub Actions
+# `new_command_here`
+poetry install -E all
+```
 
 ```console
 git fetch
@@ -62,6 +68,8 @@ The nightly build can be installed with:
 
 ```console
 pip install openbb-terminal-nightly[all]
+# Added command to fix failing GitHub Actions
+# `new_command_here`
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
