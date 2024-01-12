@@ -39,17 +39,18 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 </details>
 
-<details><summary>How do I update my installation to the latest version?</summary>
+<details><summary>How do I update the SDK installation to the latest version?</summary>
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published, run the following command to update the SDK: `pip install -U openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
 git fetch
 git pull
 poetry install -E all
+poetry run pre-commit install
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -105,7 +106,7 @@ Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/
 
 </details>
 
-<details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
+<details><summary>Error: To resolve the 'Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'' error, install libomp from Homebrew using the following command:</summary>
 
 This error is resolved by installing libomp from Homebrew:
 
