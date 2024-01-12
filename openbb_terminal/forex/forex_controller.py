@@ -1,6 +1,6 @@
 """Forex Controller."""
 
-from openbb_terminal.decorators import check_api_key, log_start_end
+
 from datetime import datetime, timedelta
 from typing import List, Optional
 from openbb_terminal.decorators import check_api_key, log_start_end
