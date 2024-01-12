@@ -42,11 +42,11 @@ The OpenBB Terminal installation packages are compatible with:
 
 <details><summary>How do I update my installation to the latest version?</summary>
 
-The terminal is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
+The OpenBB Terminal is regularly updated with new features and bug fixes. The update process differs based on the installation type:
 
-- As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
-- For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published, run the following command to update the SDK: `pip install -U openbb[all]` and fix any failing GitHub Actions run.
+- As of version 2.4.1, the Windows installer has an option to uninstall the existing version before updating.
+- For other installer versions, uninstall the previous version using the appropriate method for the operating system. Then, download the latest version and reinstall. User settings and data will remain.
+- For a `pip` installation, update the SDK by running the command: `pip install -U openbb[all]`. Additionally, fix any failing GitHub Actions run.
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
@@ -61,7 +61,7 @@ poetry install -E all
 
 ### PyPi Nightly
 
-The nightly build can be installed with:
+To install the nightly build, use:
 
 ```console
 pip install openbb-terminal-nightly[all]
@@ -71,7 +71,7 @@ pip install openbb-terminal-nightly[all]
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, and then retry the installation.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
@@ -85,7 +85,7 @@ There may be an additional message that is printed from this error, stating: "Mi
 
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+Mac and Linux users may encounter a similar error if a C++ compiler is not installed. To resolve this, install Homebrew using the following commands:
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -100,7 +100,7 @@ brew install cmake
 
 </details>
 
-<details><summary>Miniconda3 will not install on ARM/Linux Raspberry Pi machines.</summary>
+<details><summary>Miniconda3 cannot be installed on ARM/Linux Raspberry Pi machines.</summary>
 
 Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/10723) page.
 
