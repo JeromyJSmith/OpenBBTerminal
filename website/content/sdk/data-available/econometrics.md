@@ -287,7 +287,7 @@ To run panel regressions, it is important to define both _entity_ (e.g. company)
 Trying to run the `openbb.econometrics.re` function would right now result in the following:
 
 ```
-openbb.econometrics.re(wage_panel['black'], wage_panel.drop('black', axis=1))
+wage_panel = wage_panel.set_index(['nr', 'year'])
 
 Error: Series can only be used with a 2-level MultiIndex
 ```
