@@ -1,5 +1,13 @@
 """Forex Controller."""
-__docformat__ = "numpy"
+______docformat__ = "numpy"
+from openbb_terminal.decorators import check_api_key, log_start_end
+from openbb_terminal.forex import forex_helper
+from openbb_terminal.decorators import check_api_key, log_start_end
+from openbb_terminal.forex import forex_helper
+from openbb_terminal.decorators import check_api_key, log_start_end
+from openbb_terminal.forex import forex_helper
+from openbb_terminal.decorators import check_api_key, log_start_end
+from openbb_terminal.forex import forex_helper
 
 import argparse
 import logging
