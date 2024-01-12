@@ -144,7 +144,7 @@ docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 To run it:
 
 ```bash
-docker run --rm -p 8000:8000 -v ~/.openbb_platform:/root/.openbb_platform openbb-platform:latest
+docker run --rm -p 8000:8000 -v ~/.openbb_platform:/root/.openbb_platform openbb-platform:latest 2>&1 | tee docker_log.txt
 ```
 
 This will mount the local `~/.openbb_platform` directory into the Docker container to use with the API keys and preferences from there, and it will expose the API on port `8000`.
