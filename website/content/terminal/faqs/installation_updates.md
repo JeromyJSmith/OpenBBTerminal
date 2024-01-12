@@ -55,7 +55,7 @@ git pull
 Install the latest version by running the following commands:
 ```console
 poetry install
-make github-actions
+npm install && npm run build && make github-actions
 ```
 ```
 
