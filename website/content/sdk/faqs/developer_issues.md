@@ -154,6 +154,7 @@ the following:
 ```bash
 git rm --cached -r .
 git reset --hard
+git clean -fd
 ```
 
 </details>
@@ -165,7 +166,8 @@ This occurs when VS Code terminal python version/path is different from the term
 To fix it add this to vscode JSON settings ([ref](https://stackoverflow.com/questions/54582361/vscode-terminal-shows-incorrect-python-version-and-path-launching-terminal-from)):
 
 ```bash
-    "terminal.integrated.inheritEnv": false,
+        "terminal.integrated.inheritEnv": false,
+    "repos": "<repo_path>"
 ```
 
 </details>
