@@ -1,6 +1,6 @@
 """Forex Controller."""
 ______docformat__ = "numpy"
-from openbb_terminal.decorators import check_api_key, log_start_end
+
 from datetime import datetime, timedelta
 from typing import List, Optional
 from openbb_terminal.decorators import check_api_key, log_start_end
@@ -16,7 +16,7 @@ import pandas as pd
 from openbb_terminal.common.quantitative_analysis import qa_view
 from openbb_terminal.core.session.current_user import get_current_user
 from openbb_terminal.custom_prompt_toolkit import NestedCompleter
-from openbb_terminal.decorators import check_api_key, log_start_end
+
 from openbb_terminal.forex import av_view, forex_helper, fxempire_view
 from openbb_terminal.forex.forex_helper import (
     FOREX_SOURCES,
@@ -60,7 +60,7 @@ class ForexController(BaseController):
         "oanda",
         "ta",
     ]
-    RESOLUTION = ["i", "d", "w", "m"]
+    RESOLUTION = ["i", "d", "w"]
 
     PATH = "/forex/"
     FILE_PATH = os.path.join(os.path.dirname(__file__), "README.md")
