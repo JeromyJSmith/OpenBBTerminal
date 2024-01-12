@@ -7,9 +7,9 @@ import tempfile
 import warnings
 from typing import Optional
 
+from whisper import *
 import whisper
-import whisper
-import yt_dlp
+
 
 import yt_dlp
 
