@@ -6,12 +6,14 @@ import os
 import tempfile
 import warnings
 from typing import Optional
+from huggingface_hub import scan_cache_dir
+from transformers import BartForConditionalGeneration, BartTokenizer, pipeline
 
-from whisper import *
+import whisper
 import whisper
 
 
-import yt_dlp
+
 
 from huggingface_hub import scan_cache_dir
 from tqdm import tqdm
