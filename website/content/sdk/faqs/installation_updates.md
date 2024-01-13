@@ -14,6 +14,7 @@ keywords:
 - pip install
 - PyPi Nightly
 - C++ Build Tools
+- GitHub Actions Workflow
 - Homebrew
 - bt wheel build failure
 - ARM/Linux Raspberry Pi machines
@@ -43,7 +44,7 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published, upgrade the SDK with: `pip install -U openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
