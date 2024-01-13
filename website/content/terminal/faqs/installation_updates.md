@@ -44,15 +44,15 @@ The OpenBB Terminal installation packages are compatible with:
 
 The terminal is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
-- For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For the Windows installer, uninstall the existing version before updating.
+- For other installation types, uninstall the previous version and reinstall the latest version. Any user settings and data will remain.
+- For a `poetry` installation, when a new version is published: `poetry update openbb-terminal`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
 git fetch
 git pull
-poetry install -E all
+poetry update openbb-terminal
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main` or `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -61,7 +61,7 @@ poetry install -E all
 
 ### PyPi Nightly
 
-The nightly build can be installed with:
+To install the nightly build, use the following command:
 
 ```console
 pip install openbb-terminal-nightly[all]
@@ -79,7 +79,7 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 
 </details>
 
-<details><summary>Error: failed building wheel for bt</summary>
+<details><summary>If you encounter the following error, take the following steps to address it:</summary>
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
 
@@ -106,9 +106,11 @@ Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/
 
 </details>
 
-<details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
+<details><summary>To handle this error, follow these steps to resolve the issue:</summary>
 
-This error is resolved by installing libomp from Homebrew:
+To resolve this error, follow these steps:
+
+To handle this error, follow these steps to resolve the issue:
 
 ```console
 brew install libomp
