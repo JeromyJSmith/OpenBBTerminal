@@ -143,7 +143,7 @@ Enter this API key into the OpenBB Terminal by typing:
 <details>
 <summary>Instructions</summary>
 
-The BizToc API is hosted on RapidAPI.  To set up, go to: https://rapidapi.com/thma/api/biztoc.
+The BizToc API is hosted on RapidAPI.  To set up, go to: https://rapidapi.com/thma/api/biztoc
 
 ![biztoc0](https://github.com/marban/OpenBBTerminal/assets/18151143/04cdd423-f65e-4ad8-ad5a-4a59b0f5ddda)
 
