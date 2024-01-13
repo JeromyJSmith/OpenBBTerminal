@@ -44,12 +44,12 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
 - For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- For a `poetry` installation, when a new version is published: `poetry update openbb-terminal`
 
 ```console
 git fetch
 git pull
-poetry install -E all
+poetry update openbb-terminal
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -101,11 +101,18 @@ softwareupdate --install-rosetta
 
 <details><summary>Miniconda3 will not install on ARM/Linux Raspberry Pi machines.</summary>
 
+If you encounter this issue, refer to this [GitHub page](https://github.com/conda/conda/issues/10723) for assistance.
+
 Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/10723) page.
 
 </details>
 
 <details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
+
+To resolve this error, follow these steps:
+```console
+brew install libomp
+```
 
 This error is resolved by installing libomp from Homebrew:
 
