@@ -44,15 +44,15 @@ The OpenBB Terminal installation packages are compatible with:
 
 The terminal is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
-- For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
+- To update the terminal installation, the Windows installer as of version 2.4.1 has an option for uninstalling the existing prior to updating.
+- For other installer versions, to update the terminal installation, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
 - For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- Fix the failing GitHub Actions run by updating the cloned version of the GitHub repo with:
 
 ```console
 git fetch
 git pull
-poetry install -E all
+<Specific command to fix GitHub Actions run>
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main` or `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
