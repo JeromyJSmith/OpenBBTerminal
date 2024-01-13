@@ -418,9 +418,9 @@ Enter the API key into the OpenBB Terminal with:
 <details>
 <summary>Instructions</summary>
 
-Go to: https://github.com
+Go to: https://github.com/settings/apps
 
-![GitHub](https://user-images.githubusercontent.com/46355364/207846953-7feae777-3c3b-4f21-9dcf-84817c732618.png)
+![GitHub App](https://user-images.githubusercontent.com/46355364/207846953-7feae777-3c3b-4f21-9dcf-84817c732618.png)
 
 Sign up for, or sign in to, GitHub. Once logged in, navigate to the [apps](https://github.com/settings/apps) page, under account settings.
 
