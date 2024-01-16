@@ -68,7 +68,7 @@ The nightly build can be installed with:
 pip install --upgrade openbb-terminal-nightly[all]
 ```
 
-**Note**: This version may not be stable and should not be used in a production setting.
+**Note**: This version may not be stable and should not be used in a production setting. However, you can install it with 'pip install --upgrade openbb-terminal-nightly[all]'.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
