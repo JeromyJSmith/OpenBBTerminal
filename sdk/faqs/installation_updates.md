@@ -62,7 +62,7 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 
 </details>
 
-<details><summary>Error: failed building wheel for bt</summary>
+<details><summary>Error: failed building wheel for bt and detailed Homebrew installation steps for Mac and Linux users</summary>
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
 
