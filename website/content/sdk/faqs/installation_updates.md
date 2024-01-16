@@ -2,7 +2,7 @@
 title: Installation and Updates
 sidebar_position: 1
 description: This page provides detailed instructions for the installation and updating
-  processes for software, addressing frequently encountered installation issues. These
+  processes for software, addressing frequently encountered installation issues, and these
   instructions include resolving Microsoft Visual C++ 14.0 dependencies, benefits
   of using Miniconda for package management, methods to update installations, and
   solutions for other common installation errors.
@@ -91,6 +91,7 @@ Mac and Linux users may also encounter a similar error because a C++ compiler is
 Then run:
 
 ```console
+# Install the required dependencies for Mac and Linux systems:
 brew install gcc
 brew install cmake
 ```
