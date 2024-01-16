@@ -27,7 +27,7 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 
 <details><summary>Do I have to use Miniconda?</summary>
 
-There are certain dependencies that are sourced exclusively from the `conda-forge` directory. Other virtual environment managers, such as `venv`, may not properly solve the environment, resulting in failed package installations or incorrect builds. We highly recommend using Miniconda as the Python virtual environment manager for installing the OpenBB SDK.
+Miniconda is a lightweight package manager that allows for effortless management of Python environments. It is recommended for installing the OpenBB SDK due to its flexibility and ease of use.
 
 </details>
 
