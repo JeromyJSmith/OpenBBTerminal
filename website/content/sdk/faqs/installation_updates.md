@@ -112,7 +112,7 @@ For more information, refer to this [GitHub issue](https://github.com/conda/cond
 
 <details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
 
-This error is resolved by installing libomp from Homebrew:
+To resolve this error, install libomp using Homebrew:
 
 ```console
 brew install libomp
