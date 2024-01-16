@@ -96,6 +96,7 @@ jobs:
 
       - name: Cache pip packages
         uses: actions/cache@v2
+        strategy:
         with:
           path: ~/.cache/pip
           key: runner_env-${{ runner.os }}-v1-${{ hashFiles('**/poetry.lock', '**/dev_install.py') }}
@@ -108,7 +109,7 @@ jobs:
           token: ${{ secrets.SLACK_API_TOKEN }}
           initial_comment: "API Integration test summary"
           title: "Integration test summary"
-          path: summary.txt
+          file: summary.txt
           channel: ${{ secrets.SLACK_CHANNEL_ID }}
 
       - name: Slack Notification - Success/Failure
