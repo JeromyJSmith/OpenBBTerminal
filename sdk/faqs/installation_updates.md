@@ -35,12 +35,12 @@ Miniconda is a lightweight package manager that allows for effortless management
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary depending on the installation type:
 
-- For a `pip` installation, when a new version is published, run the following command: `pip install -U openbb[all]`
-- If you have cloned the GitHub repository, you can upgrade it by running the following commands:
+- For a `pip` installation, when a new version is published, run the following command: `pip install -U openbb[all]` to update to the latest version.
+- If you have cloned the GitHub repository, you can upgrade it to the latest version by running the following commands:
   ```
   git fetch
   git pull
-  poetry install -E all
+  poetry update && git merge main && poetry install -E all
   ```
   Note: If the cloned repository is a fork, pull from `git pull origin main` or `git pull origin develop`. If there are local changes that conflict with the incoming changes from GitHub, stash them before pulling from main using `git stash`.
 
