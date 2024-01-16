@@ -29,6 +29,7 @@ jobs:
           export PATH=""
           export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
           echo $PATH
+          echo $PATH
       # Set up caching for conda env so that the workflow runs quickly after the first time
       - name: Setup Conda Caching
         uses: actions/cache@v3
@@ -152,6 +153,13 @@ jobs:
           sed -n '/Integration Coverage Summary/,$p' result.txt >> summary.txt
 
       - name: Upload summary to Slack
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_API_TOKEN }}
+          initial_comment: "MacOs Build Integration test summary"
+          title: "MacOs Build Integration test summary"
+          file: summary.txt
+          channel: ${{ secrets.SLACK_CHANNEL_ID }}
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_API_TOKEN }}
