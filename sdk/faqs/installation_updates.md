@@ -48,7 +48,7 @@ The code is constantly being updated with new features and bug fixes. The proces
 
 ### PyPi Nightly
 
-The nightly build can be installed with the following command:
+To install the nightly build, follow these steps:
 
 ```
 pip install openbb-terminal-nightly[all]
