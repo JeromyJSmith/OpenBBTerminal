@@ -104,9 +104,9 @@ softwareupdate --install-rosetta
 
 </details>
 
-<details><summary>Miniconda3 will not install on ARM/Linux Raspberry Pi machines.</summary>
+<details><summary>Miniconda3 is not compatible with ARM/Linux Raspberry Pi machines.</summary>
 
-Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/10723) page.
+For more information, refer to this [GitHub issue](https://github.com/conda/conda/issues/10723) on the Conda GitHub page.
 
 </details>
 
