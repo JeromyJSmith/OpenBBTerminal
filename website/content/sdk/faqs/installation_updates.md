@@ -2,7 +2,7 @@
 title: Installation and Updates
 sidebar_position: 1
 description: This page provides detailed instructions for the installation and updating
-  processes for software, addressing frequently encountered installation issues. These
+  processes for software, addressing frequently encountered installation issues, and these
   instructions include resolving Microsoft Visual C++ 14.0 dependencies, benefits
   of using Miniconda for package management, methods to update installations, and
   solutions for other common installation errors.
@@ -43,11 +43,15 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published: `pip install --upgrade openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
 git fetch
+# If you are updating a fork, pull from the main branch using: git pull origin main
+# If you are updating a fork, pull from the develop branch using: git pull origin develop
+# If there are local changes, stash them with: git stash
+# Then pull from the main branch using: git pull origin main
 git pull
 poetry install -E all
 ```
@@ -61,10 +65,10 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install --upgrade openbb-terminal-nightly[all]
 ```
 
-**Note**: This version may not be stable and should not be used in a production setting.
+**Note**: This version may not be stable and should not be used in a production setting. However, you can install it with 'pip install --upgrade openbb-terminal-nightly[all]'.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
@@ -87,6 +91,7 @@ Mac and Linux users may also encounter a similar error because a C++ compiler is
 Then run:
 
 ```console
+# Install the required dependencies for Mac and Linux systems:
 brew install gcc
 brew install cmake
 ```
@@ -99,15 +104,15 @@ softwareupdate --install-rosetta
 
 </details>
 
-<details><summary>Miniconda3 will not install on ARM/Linux Raspberry Pi machines.</summary>
+<details><summary>Miniconda3 is not compatible with ARM/Linux Raspberry Pi machines.</summary>
 
-Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/10723) page.
+For more information, refer to this [GitHub issue](https://github.com/conda/conda/issues/10723) on the Conda GitHub page.
 
 </details>
 
 <details><summary>Error: Library not loaded: '/usr/local/opt/libomp/lib/libomp.dylib'</summary>
 
-This error is resolved by installing libomp from Homebrew:
+To resolve this error, install libomp using Homebrew:
 
 ```console
 brew install libomp
