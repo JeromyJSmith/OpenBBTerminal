@@ -43,9 +43,18 @@ Pull requests submitted to the Main branch will not be merged, please create bra
 
 To switch to the develop branch:
 
+To switch to the develop branch:
+
 ```console
 git checkout develop
 ```
+
+Branches must also follow the naming convention:
+
+- /feature/name_your_branch
+  - For developing functionality.
+- /hotfix/name_your_patch
+  - For bug patches.
 
 Branches must also follow the naming convention:
 
