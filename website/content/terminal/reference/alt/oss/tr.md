@@ -16,6 +16,7 @@ keywords:
 ---
 
 import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
+import CommandCard from '@site/src/components/CommandCard.tsx';
 
 <HeadTitle title="alt/oss/tr - Reference | OpenBB Terminal Docs" />
 
