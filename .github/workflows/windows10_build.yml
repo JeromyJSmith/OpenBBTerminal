@@ -7,11 +7,11 @@ env:
   PIP_DEFAULT_TIMEOUT: 100
   PYTHONNOUSERSITE: 1
 
-on: workflow_dispatch
+on: [workflow_dispatch, check_run]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  timeout-minutes: 60
 
 jobs:
   Windows-Build:
@@ -38,6 +38,9 @@ jobs:
           source venv/Scripts/activate
           python -m pip install setuptools==65.4.1 wheel
           python -m pip install -r requirements-full.txt --no-cache-dir
+      python -m pip uninstall papermill -y
+      python -m pip install git+https://github.com/nteract/papermill.git@main
+      python -m PyInstaller build/pyinstaller/terminal.spec --clean
           python -m pip uninstall papermill -y
           python -m pip install git+https://github.com/nteract/papermill.git@main
           python -m PyInstaller build/pyinstaller/terminal.spec --clean
@@ -111,7 +114,7 @@ jobs:
       - name: Run Integration Tests Coverage Report
         run: |
           dist\OpenBBTerminal\OpenBBTerminal.exe -t --coverage | tee result.txt
-          Select-String "============================== Integration Coverage Summary ==============================" result.txt -Context 0,300 | Select-Object -Last 2000 >> summary.txt
+          Select-String "============================== Integration Coverage Summary ==============================" result.txt -Context 0,300 | Select-Object -Last 2000 | Out-File summary.txt
 
       - name: Upload summary to Slack
         uses: adrey/slack-file-upload-action@master
