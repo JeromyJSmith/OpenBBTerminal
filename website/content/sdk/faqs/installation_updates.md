@@ -14,6 +14,9 @@ keywords:
 - pip install
 - PyPi Nightly
 - C++ Build Tools
+- Microsoft Visual C++ 14.0
+- C++ Build Tools installation
+- Restart machine after installation
 - Homebrew
 - bt wheel build failure
 - ARM/Linux Raspberry Pi machines
@@ -28,6 +31,8 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
+
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine after installation, then try again.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/f8aef8fc-a080-4164-bd36-460714ec44f3)
 
