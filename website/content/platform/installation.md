@@ -1,6 +1,7 @@
 ---
 title: Installation
-sidebar_position: 1
+sideb
+- Microsoft Visual C++ 14.0 or greater is requiredar_position: 1
 description: This page presents the general system requirements, supported environments,
   installation procedures, and setup for running the OpenBB Platform. It discusses
   the prerequisites including Python version, operating system requirements, Docker
