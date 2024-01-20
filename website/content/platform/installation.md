@@ -62,7 +62,7 @@ With the environment created, and activated, begin the installation process.
 
 ## Installation
 
-Before installation, update the package manager so that `pip` is current, then create the environment with the desired version of Python.
+Before installation or update, update the package manager so that `pip` is current, then create the environment with the desired version of Python.
 
 :::note
 Installing packages directly to the system Python or `base` environment is not recommended.  Create a new environment first (can be any name, using openbb here for example).
@@ -74,12 +74,12 @@ conda activate openbb
 
 :::
 
-### PyPI
+### PyPI - Install or Update
 
 Install from PyPI with:
 
 ```console
-pip install openbb
+pip install --upgrade openbb
 ```
 
 This will install the core OpenBB Platform, along with officially supported extensions and providers.
@@ -103,7 +103,7 @@ pip install openbb[ta]
 Or install a single provider:
 
 ```console
-pip install openbb[yfinance]
+pip install --upgrade openbb[yfinance]
 ```
 
 From your python interpreter, import the OpenBB Platform:
@@ -152,13 +152,13 @@ This will mount the local `~/.openbb_platform` directory into the Docker contain
 
 ### Source
 
-To build the OpenBB Platform from the source code, first install `git`:
+To install the latest version from the source code, first install `git`:
 
 ```console
 pip install git
 ```
 
-Next, clone the repository from GitHub:
+Next, clone the latest repository from GitHub:
 
 ```console
 git clone git@github.com:OpenBB-finance/OpenBBTerminal.git
