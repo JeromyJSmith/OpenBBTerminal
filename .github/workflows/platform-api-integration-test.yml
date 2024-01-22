@@ -13,7 +13,7 @@ jobs:
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       OPENBB_API_AUTH: true
-      OPENBB_API_USERNAME: "USER"
+      OPENBB_API_USERNAME: ${{ secrets.OPENBB_API_USERNAME }}
       OPENBB_API_PASSWORD: "PASS"
 
     steps:
@@ -49,6 +49,13 @@ jobs:
         if: steps.cached-python-environment.outputs.cache-hit != 'true'
         run: |
           python -m venv runner_env
+          source runner_env/bin/activate
+          pip install poetry toml
+          python openbb_platform/dev_install.py -e all
+          echo ::set-env name=version::$(date +%Y%m%d%H%M)
+          cat pyproject.toml | sed '3s/version = \"\(.*\)\"/version = \"\1.dev${version}\"/' > tmpfile && mv tmpfile pyproject.toml
+          echo ::set-env name=install_cmd::pip install openbb-terminal-nightly > tmpfile
+          cat ./website/pypi.md | sed 's/pip install openbb-terminal/${install_cmd}/g' > tmpfile && mv tmpfile ./website/pypi.md
           source runner_env/bin/activate
           pip install poetry toml
           python openbb_platform/dev_install.py -e all
