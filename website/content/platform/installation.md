@@ -61,7 +61,7 @@ With the environment created, and activated, begin the installation process.
 
 ## Installation
 
-Before installation, update the package manager so that `pip` is current, then create the environment with the desired version of Python.
+Before installation, update the system package manager to ensure `pip` is up-to-date. After that, create a Python virtual environment with the desired version of Python.
 
 :::note
 Installing packages directly to the system Python or `base` environment is not recommended.  Create a new environment first (can be any name, using openbb here for example).
@@ -193,7 +193,7 @@ To install all extensions and providers, run: `python dev_install.py -e`
 
 ## Post-Installation
 
-With a fresh installation, and upon installing or uninstalling extensions, the Python interface needs to be built.  This is done automatically, but can be manually triggered if required. Start a Python session and then `import openbb`:
+After a fresh installation, or when installing or uninstalling extensions, the Python package interface is automatically built. However, it can also be manually triggered when necessary. Start a Python session and then `import openbb`:
 
 ```console
 python

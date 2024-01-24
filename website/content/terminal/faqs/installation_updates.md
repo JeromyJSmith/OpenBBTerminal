@@ -46,8 +46,8 @@ The terminal is constantly being updated with new features and bug fixes. The pr
 
 - As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
 - For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- To update the PyPi installation, run the following command:
+- For a GitHub repository installation, follow these steps to update:
 
 ```console
 git fetch
@@ -55,7 +55,7 @@ git pull
 poetry install -E all
 ```
 
-**Notes:** If the cloned repository is a fork, pull from: `git pull origin main` or `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
+Before updating a cloned repository, ensure there are no local conflicts by stashing any changes using `git stash`, then perform the update by running the following commands:
 
 </details>
 
