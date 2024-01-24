@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add necessary steps to fix the failing actions
+
+      - name: Build and test
+        run: |
+          # Add build and test commands here
+
+      - name: Deploy
+        run: |
+          # Add deployment commands here
