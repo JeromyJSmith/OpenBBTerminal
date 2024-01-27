@@ -36,7 +36,7 @@ The OpenBB Terminal installation packages are compatible with:
 - Windows 10 or later.
 - MacOS Monterey or later.
 
-**Note:** Machines which are not compatible with the installer packages may be able to install from the source code.
+**Note:** Machines which are not compatible with the installer packages may be able to install from the source code. Mac ARM users need to install Rosetta before proceeding with the installation.
 
 </details>
 
@@ -70,7 +70,7 @@ pip install openbb-terminal-nightly --index-url https://pypi.org/project/openbb-
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-cpp-build-tools-2015-2019), restart the machine, then try again.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
@@ -84,7 +84,7 @@ There may be an additional message that is printed from this error, stating: "Mi
 
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Rosetta for Mac ARM users and Homebrew for Mac and Linux users. Then run:
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
