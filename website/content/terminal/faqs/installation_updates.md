@@ -36,7 +36,7 @@ The OpenBB Terminal installation packages are compatible with:
 - Windows 10 or later.
 - MacOS Monterey or later.
 
-**Note:** Machines which are not compatible with the installer packages may be able to install from the source code.
+**Note:** Machines which are not compatible with the installer packages may be able to install from the source code. Mac ARM users need to install Rosetta before proceeding with the installation.
 
 </details>
 
@@ -46,9 +46,8 @@ The terminal is constantly being updated with new features and bug fixes. The pr
 
 - As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
 - For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+new line(s) to replace
 - Upgrade a cloned version of the GitHub repo with:
-
 ```console
 git fetch
 git pull
@@ -64,14 +63,14 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly --index-url https://pypi.org/project/openbb-terminal-nightly/ --extra-index-url https://pypi.org/simple/ openbb-terminal-nightly[all]
 ```
 
-**Note**: This version may not be stable and should not be used in a production setting.
+**Note**: The PyPi Nightly version may not be stable and should not be used in a production setting.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-cpp-build-tools-2015-2019), restart the machine, then try again.
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
@@ -85,7 +84,7 @@ There may be an additional message that is printed from this error, stating: "Mi
 
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Rosetta for Mac ARM users and Homebrew for Mac and Linux users. Then run:
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -94,9 +93,8 @@ Mac and Linux users may also encounter a similar error because a C++ compiler is
 Then run:
 
 ```console
-brew install gcc
-brew install cmake
-```
+brew unlink libomp
+brew link libomp
 
 </details>
 
@@ -111,7 +109,7 @@ Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/
 This error is resolved by installing libomp from Homebrew:
 
 ```console
-brew install libomp
+brew install libomp; brew link libomp
 ```
 
 </details>
