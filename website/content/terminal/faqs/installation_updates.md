@@ -93,9 +93,8 @@ Mac and Linux users may also encounter a similar error because a C++ compiler is
 Then run:
 
 ```console
-brew install gcc
-brew install cmake
-```
+brew unlink libomp
+brew link libomp
 
 </details>
 
@@ -110,7 +109,7 @@ Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/
 This error is resolved by installing libomp from Homebrew:
 
 ```console
-brew install libomp
+brew install libomp; brew link libomp
 ```
 
 </details>
