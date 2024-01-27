@@ -63,10 +63,10 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly --index-url https://pypi.org/project/openbb-terminal-nightly/ --extra-index-url https://pypi.org/simple/ openbb-terminal-nightly[all]
 ```
 
-**Note**: This version may not be stable and should not be used in a production setting.
+**Note**: The PyPi Nightly version may not be stable and should not be used in a production setting.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
