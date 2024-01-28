@@ -86,29 +86,29 @@ This will install the core OpenBB Platform, along with officially supported exte
 To install all extensions and providers (both officially supported and community maintained ones):
 
 ```console
-pip install openbb[all]
+pip install openbb-terminal[all]
 ```
 
 To install a single extension:
 
 ```console
-pip install openbb[charting]
+pip install openbb-terminal[charting]
 ```
 
 ```console
-pip install openbb[ta]
+pip install openbb-terminal[ta]
 ```
 
 Or install a single provider:
 
 ```console
-pip install openbb[yfinance]
+pip install openbb-terminal[yfinance]
 ```
 
 From your python interpreter, import the OpenBB Platform:
 
 ```console
-from openbb import obb
+from openbb_terminal import obb
 ```
 
 :::warning
@@ -126,7 +126,7 @@ When the package is imported, any installed extensions will be discovered, impor
 Currently if you wish to have the bare-bones openbb package with no extensions or providers, you can install with:
 
 ```console
-pip install openbb-core && pip install openbb --no-deps
+pip install openbb-core && pip install openbb-terminal --no-deps
 ```
 
 :::
@@ -138,6 +138,7 @@ OpenBB provides a `.dockerfile` on [GitHub](https://github.com/OpenBB-finance/Op
 Run the following command from the repo root to build the image:
 
 ```bash
+docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 ```
 
