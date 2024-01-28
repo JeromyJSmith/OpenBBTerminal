@@ -59,7 +59,7 @@ poetry install
 
 </details>
 
-### Installing the OpenBB SDK
+### PyPi Nightly
 
 The nightly build can be installed with:
 
