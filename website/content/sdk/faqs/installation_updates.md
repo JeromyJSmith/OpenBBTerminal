@@ -50,6 +50,8 @@ The code is constantly being updated with new features and bug fixes. The proces
 git fetch
 git checkout develop
 git pull
+git stash
+git stash
 poetry install
 ```
 
