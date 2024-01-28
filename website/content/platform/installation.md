@@ -217,7 +217,7 @@ Restart the Python interpreter and then begin using the OpenBB Platform.
 from openbb import obb
 ```
 
-Start the REST API with:
+To start the REST API, run the following command:
 
 ```console
 uvicorn openbb_core.api.rest_api:app --host 0.0.0.0 --port 8000 --reload
