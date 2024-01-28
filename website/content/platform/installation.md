@@ -78,7 +78,7 @@ conda activate openbb
 Install from PyPI with:
 
 ```console
-pip install openbb
+pip install openbb-terminal[all]
 ```
 
 This will install the core OpenBB Platform, along with officially supported extensions and providers.
@@ -86,29 +86,29 @@ This will install the core OpenBB Platform, along with officially supported exte
 To install all extensions and providers (both officially supported and community maintained ones):
 
 ```console
-pip install openbb[all]
+pip install openbb-terminal[all]
 ```
 
 To install a single extension:
 
 ```console
-pip install openbb[charting]
+pip install openbb-terminal[charting]
 ```
 
 ```console
-pip install openbb[ta]
+pip install openbb-terminal[ta]
 ```
 
 Or install a single provider:
 
 ```console
-pip install openbb[yfinance]
+pip install openbb-terminal[yfinance]
 ```
 
 From your python interpreter, import the OpenBB Platform:
 
 ```console
-from openbb import obb
+from openbb_terminal import obb
 ```
 
 :::warning
@@ -126,7 +126,7 @@ When the package is imported, any installed extensions will be discovered, impor
 Currently if you wish to have the bare-bones openbb package with no extensions or providers, you can install with:
 
 ```console
-pip install openbb-core && pip install openbb --no-deps
+pip install openbb-core && pip install openbb-terminal --no-deps
 ```
 
 :::
@@ -138,6 +138,7 @@ OpenBB provides a `.dockerfile` on [GitHub](https://github.com/OpenBB-finance/Op
 Run the following command from the repo root to build the image:
 
 ```bash
+docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
 ```
 
@@ -154,7 +155,7 @@ This will mount the local `~/.openbb_platform` directory into the Docker contain
 To build the OpenBB Platform from the source code, first install `git`:
 
 ```console
-pip install git
+cd OpenBBTerminal
 ```
 
 Next, clone the repository from GitHub:
@@ -163,7 +164,7 @@ Next, clone the repository from GitHub:
 git clone git@github.com:OpenBB-finance/OpenBBTerminal.git
 ```
 
-When it is done, checkout the branch where the code is living:
+Once cloned, checkout the branch where the code is living:
 
 ```console
 git checkout develop
@@ -172,7 +173,7 @@ git checkout develop
 Then, `cd` into the directory:
 
 ```console
-cd openbb_platform
+pip install poetry toml && poetry install
 ```
 
 Install required packages
@@ -195,11 +196,7 @@ To install all extensions and providers, run: `python dev_install.py -e`
 
 With a fresh installation, and upon installing or uninstalling extensions, the Python interface needs to be built.  This is done automatically, but can be manually triggered if required. Start a Python session and then `import openbb`:
 
-```console
-python
-
-from openbb import obb
-
+```python
 exit()
 ```
 
@@ -216,7 +213,7 @@ Restart the Python interpreter and then begin using the OpenBB Platform.
 from openbb import obb
 ```
 
-Start the REST API with:
+To start the REST API, run the following command:
 
 ```console
 uvicorn openbb_core.api.rest_api:app --host 0.0.0.0 --port 8000 --reload
