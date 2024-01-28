@@ -49,7 +49,7 @@ The code is constantly being updated with new features and bug fixes. The proces
 ```console
 git fetch
 git pull
-poetry install -E all
+python -m poetry add openbb-terminal --extras all
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -61,7 +61,9 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly --extras all
+
+**Note**: This version may not be stable and should not be used in a production setting.
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
@@ -81,14 +83,26 @@ Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-to
 Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
 
 ```console
+1. Open Terminal and run the following command to install Homebrew:
+
+```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 ```
 
 Then run:
 
 ```console
-brew install gcc
+1. Install gcc with the following command:
+
+```shell
+brew install gcc 
+```
+2. Install cmake with the following command:
+
+```shell
 brew install cmake
+```
 ```
 
 Additionally, Mac users should install Rosetta:
@@ -99,7 +113,7 @@ softwareupdate --install-rosetta
 
 </details>
 
-<details><summary>Miniconda3 will not install on ARM/Linux Raspberry Pi machines.</summary>
+<details><summary>Miniconda3 installation on ARM/Linux Raspberry Pi machines
 
 Refer to this issue on the Conda [GitHub](https://github.com/conda/conda/issues/10723) page.
 
