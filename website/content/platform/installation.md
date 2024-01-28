@@ -78,7 +78,7 @@ conda activate openbb
 Install from PyPI with:
 
 ```console
-pip install openbb
+pip install openbb-terminal[all]
 ```
 
 This will install the core OpenBB Platform, along with officially supported extensions and providers.
