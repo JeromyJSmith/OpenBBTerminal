@@ -154,7 +154,7 @@ This will mount the local `~/.openbb_platform` directory into the Docker contain
 To build the OpenBB Platform from the source code, first install `git`:
 
 ```console
-pip install git
+cd OpenBBTerminal
 ```
 
 Next, clone the repository from GitHub:
@@ -163,7 +163,7 @@ Next, clone the repository from GitHub:
 git clone git@github.com:OpenBB-finance/OpenBBTerminal.git
 ```
 
-When it is done, checkout the branch where the code is living:
+Once cloned, checkout the branch where the code is living:
 
 ```console
 git checkout develop
@@ -172,7 +172,7 @@ git checkout develop
 Then, `cd` into the directory:
 
 ```console
-cd openbb_platform
+pip install poetry toml && poetry install
 ```
 
 Install required packages
