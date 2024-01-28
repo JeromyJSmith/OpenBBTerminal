@@ -43,20 +43,21 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published: `pip install --upgrade openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
 git fetch
+git checkout develop
 git pull
-poetry install -E all
+poetry install
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
 
 </details>
 
-### PyPi Nightly
+### Installing the OpenBB SDK
 
 The nightly build can be installed with:
 
