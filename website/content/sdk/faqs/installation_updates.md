@@ -49,7 +49,7 @@ The code is constantly being updated with new features and bug fixes. The proces
 ```console
 git fetch
 git pull
-poetry install -E all
+python -m poetry add openbb-terminal --extras all
 ```
 
 **Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
@@ -61,7 +61,7 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb-terminal-nightly --extras all
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
@@ -87,7 +87,8 @@ Mac and Linux users may also encounter a similar error because a C++ compiler is
 Then run:
 
 ```console
-brew install gcc
+brew install gcc 
+brew install cmake
 brew install cmake
 ```
 
