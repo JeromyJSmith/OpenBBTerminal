@@ -196,11 +196,7 @@ To install all extensions and providers, run: `python dev_install.py -e`
 
 With a fresh installation, and upon installing or uninstalling extensions, the Python interface needs to be built.  This is done automatically, but can be manually triggered if required. Start a Python session and then `import openbb`:
 
-```console
-python
-
-from openbb import obb
-
+```python
 exit()
 ```
 
