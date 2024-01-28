@@ -62,6 +62,8 @@ The nightly build can be installed with:
 
 ```console
 pip install openbb-terminal-nightly --extras all
+
+**Note**: This version may not be stable and should not be used in a production setting.
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.
