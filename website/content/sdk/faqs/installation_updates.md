@@ -83,15 +83,26 @@ Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-to
 Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
 
 ```console
+1. Open Terminal and run the following command to install Homebrew:
+
+```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 ```
 
 Then run:
 
 ```console
+1. Install gcc with the following command:
+
+```shell
 brew install gcc 
+```
+2. Install cmake with the following command:
+
+```shell
 brew install cmake
-brew install cmake
+```
 ```
 
 Additionally, Mac users should install Rosetta:
