@@ -35,7 +35,7 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 
 <details><summary>Do I have to use Miniconda?</summary>
 
-There are certain dependencies which are sourced exclusively from the `conda-forge` directory. Other virtual environment managers, such a `venv`, may not solve the environment properly, resulting in failed package installations or incorrect builds. We highly recommend using Miniconda as the Python virtual environment manager for installing the OpenBB SDK.
+There are certain dependencies which are sourced exclusively from the `conda-forge` directory. Other virtual environment managers, such as `venv`, may not solve the environment properly, resulting in failed package installations or incorrect builds. We highly recommend using Miniconda as the Python virtual environment manager for installing the OpenBB SDK.
 
 </details>
 
@@ -79,6 +79,27 @@ There may be an additional message that is printed from this error, stating: "Mi
 Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
 Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+Additionally, Mac users should install Rosetta:
+
+```console
+softwareupdate --install-rosetta
+```
+
+</details>
+Additionally, Mac users should install Rosetta:
+
+```console
+softwareupdate --install-rosetta
+```
+
+</details>
+Additionally, Mac users should install Rosetta:
+
+```console
+softwareupdate --install-rosetta
+```
+
+</details>
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
