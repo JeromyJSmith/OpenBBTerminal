@@ -23,6 +23,13 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 
 ## Installation and Updates
 
+<details><summary>Common Installation Issues and Troubleshooting</summary>
+
+- Missing dependencies
+- Build errors
+
+</details>
+
 <details><summary>How much hard drive space is required?</summary>
 
 An installation will use approximately 4-5 GB of space, with additional storage required for optional machine learning models.
@@ -80,6 +87,20 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 </details>
 
 <details><summary>Error: failed building wheel for bt</summary>
+
+There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
+
+Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
+Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then run:
+```console
+brew install gcc
+brew install cmake
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
 
