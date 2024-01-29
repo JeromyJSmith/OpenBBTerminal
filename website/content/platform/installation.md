@@ -138,7 +138,7 @@ OpenBB provides a `.dockerfile` on [GitHub](https://github.com/OpenBB-finance/Op
 Run the following command from the repo root to build the image:
 
 ```bash
-docker build -f build/docker/api.dockerfile -t openbb-platform:latest .
+docker build -f build/docker/api.dockerfile -t openbb-terminal:latest .
 ```
 
 To run it:
