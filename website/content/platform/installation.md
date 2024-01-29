@@ -2,9 +2,8 @@
 title: Installation
 sidebar_position: 1
 description: This page presents the general system requirements, supported environments,
-  installation procedures, and setup for running the OpenBB Platform. It discusses
-  the prerequisites including Python version, operating system requirements, Docker
-  usage, and the process of building the platform from source.
+  installation procedures, and setup for running the OpenBB Platform. It explains
+  the prerequisites, system requirements, and the process of installing and setting up the platform from source or using various package managers. It includes instructions for Windows, Mac, Linux, using Python virtual environment (venv), Conda, and Docker.
 keywords:
 - OpenBB Platform
 - Python
@@ -14,6 +13,14 @@ keywords:
 - Docker
 - Python virtual environment
 - Installation from source
+- Windows
+- Mac
+- Linux
+- Python Virtual Environment (venv)
+- Conda
+- Docker
+- pip
+- Poetry
 - Windows 10
 - Mac OS Big Sur
 - Linux
@@ -69,6 +76,7 @@ Installing packages directly to the system Python or `base` environment is not r
 ```bash
 conda create -n openbb python=3.11
 conda activate openbb
+conda install pip
 ```
 
 :::
@@ -78,7 +86,7 @@ conda activate openbb
 Install from PyPI with:
 
 ```console
-pip install openbb
+pip install openbb --user
 ```
 
 This will install the core OpenBB Platform, along with officially supported extensions and providers.
@@ -111,11 +119,11 @@ From your python interpreter, import the OpenBB Platform:
 from openbb import obb
 ```
 
-:::warning
-This import statement is required due to the statefulness of the obb package.  There is currently no support for imports such as
+:::note
+To use the OpenBB Platform with all extensions and providers, use the following import statement:
 
 ```console
-from openbb.obb.equity import *
+from openbb import obb
 ```
 
 :::
@@ -178,7 +186,7 @@ cd openbb_platform
 Install required packages
 
 ```console
-pip install poetry toml
+pip install poetry toml && poetry self update
 ```
 
 Finally, run the developer installation script:
