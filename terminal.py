@@ -1,7 +1,7 @@
 import sys
 from multiprocessing import freeze_support
 
-import openbb_terminal.config_terminal as cfg
+from openbb_terminal.config_terminal import setup_config_terminal as cfg_setup_config_terminal
 
 # pylint:disable=unused-import,import-outside-toplevel
 import openbb_terminal.core.session.current_system as syst  # noqa: F401
@@ -13,8 +13,8 @@ from openbb_terminal.terminal_helper import (
 
 
 def main():
-    sent_args = sys.argv[1:]
-    cfg.setup_config_terminal()
+    sent_args = sys.argv
+    cfg_setup_config_terminal()
 
     if "--streamlit" in sent_args:
         from openbb_terminal.dashboards import streamlit_run
@@ -36,7 +36,7 @@ def main():
         )
         dev = "--dev" in sys.argv[1:]
 
-        session_controller.main(prompt=prompt_login, dev=dev)
+        session_controller.main(prompt_login=prompt_login, dev=dev)
 
 
 if __name__ == "__main__":
