@@ -8,15 +8,16 @@ description: This page provides detailed instructions for the installation and u
   solutions for other common installation errors.
 keywords:
 - Installation
-- Updates
-- Microsoft Visual C++ 14.0
-- Miniconda
-- pip install
-- PyPi Nightly
-- C++ Build Tools
-- Homebrew
-- bt wheel build failure
-- ARM/Linux Raspberry Pi machines
+- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- Upgrade a cloned version of the GitHub repo with:
+
+```console
+git fetch
+git pull
+poetry install -E all
+```
+
+**Notes:** If the cloned repository is a fork, pull from: `git pull origin main`, or, `git pull origin develop`. If there are changes locally to the files that conflict with the incoming changes from GitHub, stash them before pulling from main with `git stash`.
 ---
 
 import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
@@ -63,7 +64,6 @@ The nightly build can be installed with:
 ```console
 pip install openbb-terminal-nightly[all]
 ```
-
 **Note**: This version may not be stable and should not be used in a production setting.
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
@@ -89,6 +89,15 @@ Then run:
 ```console
 brew install gcc
 brew install cmake
+```console
+brew install cmake
+```
+
+Additionally, Mac users should install Rosetta:
+
+```console
+softwareupdate --install-rosetta
+```
 ```
 
 Additionally, Mac users should install Rosetta:
