@@ -1,0 +1,68 @@
+name: OpenBBTerminal CI
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Install OpenBBTerminal SDK and Terminal
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            pip install -U openbb[all]
+
+      - name: Pull changes from develop branch
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - name: Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            poetry install -E all
+
+      - name: Run tests and build
+        run: |
+          # Run tests
+          pytest
+
+          # Build project
+          poetry build
+
+      - name: Commit and push changes
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git add .
+          git commit -m "feat/fix: the commit message"
+          git push
