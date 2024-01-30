@@ -25,7 +25,10 @@ import HeadTitle from '@site/src/components/General/HeadTitle.tsx';
 
 <details><summary>"Microsoft Visual C++ 14.0 or greater is required"</summary>
 
-Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again. Additionally, Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. In that case, install Homebrew by running:
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ![image](https://github.com/OpenBB-finance/OpenBBTerminal/assets/85772166/ceb57be0-6dae-42f2-aca6-bf62ce7d6135)
 
@@ -72,13 +75,13 @@ Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual
 
 </details>
 
-<details><summary>Error: failed building wheel for bt</summary>
+<details><summary>Error: failed building wheel for bt and Microsoft Visual C++ 14.0 or greater is required</summary>
 
 There may be an additional message that is printed from this error, stating: "Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools".
 
-Download and install it. [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+Download and install [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), restart the machine, then try again.
 
-Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. Install Homebrew:
+Additionally, Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. In that case, install Homebrew by running:
 
 ```console
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -91,7 +94,7 @@ brew install gcc
 brew install cmake
 ```
 
-Additionally, Mac users should install Rosetta:
+Additionally, Mac and Linux users may also encounter a similar error because a C++ compiler is not installed. In that case, install Homebrew by running:
 
 ```console
 softwareupdate --install-rosetta
