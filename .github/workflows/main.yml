@@ -39,12 +39,14 @@ jobs:
         with:
           ref: develop
 
-      - name: Install dependencies
+      - name: Install dependencies and update process
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
           extra-path: |
             poetry install -E all
+          env:
+            ENV_VAR: ${{ secrets.SECRET_NAME }}
 
       - name: Run tests and build
         run: |
