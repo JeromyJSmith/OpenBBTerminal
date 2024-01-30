@@ -33,6 +33,13 @@ jobs:
           python-version: 3.x
           extra-path: |
             pip install -U openbb[all]
+            openbb deploy
+            openbb use
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            pip install -U openbb[all]
 
       - name: Pull changes from develop branch
         uses: actions/checkout@v2
@@ -60,6 +67,12 @@ jobs:
 
           # Build project
           poetry build
+          - name: Deploy and use OpenBBTerminal SDK and Terminal
+            run: |
+              # Deploy OpenBBTerminal SDK and Terminal
+              openbb deploy
+              # Use OpenBBTerminal SDK and Terminal
+              openbb use
 
       - name: Commit and push changes
         uses: actions/checkout@v2
