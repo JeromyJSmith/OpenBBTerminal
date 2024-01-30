@@ -50,6 +50,11 @@ jobs:
 
       - name: Run tests and build
         run: |
+          # Run additional tests
+          some_additional_test_command_here
+
+          # Update some processes
+          some_additional_process_update_command_here
           # Run tests
           pytest
 
@@ -60,6 +65,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: develop
+      - name: Run additional checks
+        run: |
+          # Run additional checks
+          some_additional_check_command_here
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
