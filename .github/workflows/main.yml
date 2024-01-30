@@ -1,0 +1,92 @@
+name: OpenBBTerminal CI
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Install OpenBBTerminal SDK and Terminal
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            pip install -U openbb[all]
+            openbb deploy
+            openbb use
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            pip install -U openbb[all]
+
+      - name: Pull changes from develop branch
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - name: Install dependencies and update process
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          extra-path: |
+            poetry install -E all
+          env:
+            ENV_VAR: ${{ secrets.SECRET_NAME }}
+
+      - name: Run tests and build
+        run: |
+          # Run additional tests
+          some_additional_test_command_here
+
+          # Update some processes
+          some_additional_process_update_command_here
+          # Run tests
+          pytest
+
+          # Build project
+          poetry build
+          - name: Deploy and use OpenBBTerminal SDK and Terminal
+            run: |
+              # Deploy OpenBBTerminal SDK and Terminal
+              openbb deploy
+              # Use OpenBBTerminal SDK and Terminal
+              openbb use
+
+      - name: Commit and push changes
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+      - name: Run additional checks
+        run: |
+          # Run additional checks
+          some_additional_check_command_here
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git add .
+          git commit -m "feat/fix: the commit message"
+          git push
