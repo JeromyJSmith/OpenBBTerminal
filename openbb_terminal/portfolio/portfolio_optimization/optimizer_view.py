@@ -681,6 +681,7 @@ def display_equal_weight(
 
     weights, stock_returns = optimizer_model.get_equal_weights(
         symbols=symbols,
+        symbols=symbols,
         interval=interval,
         start_date=start_date,
         end_date=end_date,
