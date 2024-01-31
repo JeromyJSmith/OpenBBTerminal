@@ -13,7 +13,8 @@ keywords:
 - Python pip installation
 - Microsoft Visual C++
 - Homebrew installation
-- libomp
+- libomp installation issue
+- Miniconda3 installation issue
 - Conda installation issue
 ---
 
@@ -47,7 +48,9 @@ The terminal is constantly being updated with new features and bug fixes. The pr
 - As of version 2.4.1, the Windows installer has an option for uninstalling the existing prior to updating.
 - For other installer versions, uninstall the previous version (uninstall.exe for Windows, delete the Application folder on MacOS); then, download the latest version and reinstall. User settings and data will remain.
 - For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
-- Upgrade a cloned version of the GitHub repo with:
+- Fetch the latest changes from the GitHub repository using: git fetch
+- Pull the latest changes from the main branch with: git pull origin main
+- Install the necessary dependencies with: poetry install -E all
 
 ```console
 git fetch
@@ -64,7 +67,7 @@ poetry install -E all
 The nightly build can be installed with:
 
 ```console
-pip install openbb-terminal-nightly[all]
+pip install openbb[all]
 ```
 
 **Note**: This version may not be stable and should not be used in a production setting.

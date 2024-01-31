@@ -61,15 +61,19 @@ With the environment created, and activated, begin the installation process.
 
 ## Installation
 
-Before installation, update the package manager so that `pip` is current, then create the environment with the desired version of Python.
-
-:::note
-Installing packages directly to the system Python or `base` environment is not recommended.  Create a new environment first (can be any name, using openbb here for example).
+Before installation, update the package manager so that `pip` is current, then create the environment with the desired version of Python using the following command:
 
 ```bash
-conda create -n openbb python=3.11
-conda activate openbb
-```
+ :::note
+ Installing packages directly to the system Python or `base` environment is not recommended.  Create a new environment first (can be any name, using openbb here for example).
+ 
+ ```bash
+ conda create -n openbb python=3.11
+ conda activate openbb
+ 
+ # Additional step to ensure the environment is activated
+ source activate openbb
+ ```
 
 :::
 
@@ -78,7 +82,7 @@ conda activate openbb
 Install from PyPI with:
 
 ```console
-pip install openbb
+pip install openbb-terminal
 ```
 
 This will install the core OpenBB Platform, along with officially supported extensions and providers.
@@ -86,25 +90,24 @@ This will install the core OpenBB Platform, along with officially supported exte
 To install all extensions and providers (both officially supported and community maintained ones):
 
 ```console
-pip install openbb[all]
+pip install openbb-terminal[all]
 ```
 
 To install a single extension:
 
 ```console
-pip install openbb[charting]
+pip install openbb-terminal[charting]
 ```
 
 ```console
-pip install openbb[ta]
+pip install openbb-terminal[ta]
 ```
 
 Or install a single provider:
 
 ```console
-pip install openbb[yfinance]
+pip install openbb-terminal[yfinance]
 ```
-
 From your python interpreter, import the OpenBB Platform:
 
 ```console
