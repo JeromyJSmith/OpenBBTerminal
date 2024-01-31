@@ -21,6 +21,22 @@ Sign up to the [OpenBB Hub](https://my.openbb.co/login) to use our Windows or Ma
 
 <a href="https://www.youtube.com/playlist?list=PLXcRIKcHAUP45_ZZCxxvPyXFKHdq9kM8T">
   <p align="center">Getting started with the OpenBB Terminal</p>
+
+## How to Run GitHub Actions Workflow
+
+To run the GitHub Actions workflow, follow these steps:
+1. Push code to the 'develop' branch or create a pull request targeting the 'develop' branch.
+2. Ensure that the necessary secrets are correctly configured in your GitHub repository settings.
+3. Monitor the workflow status in the GitHub Actions tab and check the workflow logs for any errors.
+4. If any issues occur, refer to the Troubleshooting section below.
+
+## Troubleshooting GitHub Actions
+
+If you encounter any issues with the GitHub Actions workflow, follow these troubleshooting steps:
+1. Double-check that the required environment variables and secrets are properly configured.
+2. Review the workflow logs for any error messages or failures.
+3. Ensure that the dependencies and setup steps in the workflow file are correct and up to date.
+4. Test the workflow locally to replicate the issue and debug any errors before pushing the code.
 </a>
 
 <p align="center">
@@ -63,6 +79,22 @@ Sign up to the [OpenBB Hub](https://my.openbb.co/login) to use our Windows or Ma
 </details>
 
 ## 1. Installation
+
+### 4. GitHub Actions
+
+To run the GitHub Actions workflow, follow these steps:
+1. Push code to the 'develop' branch or create a pull request targeting the 'develop' branch.
+2. Ensure that the necessary secrets are correctly configured in your GitHub repository settings.
+3. Monitor the workflow status in the GitHub Actions tab and check the workflow logs for any errors.
+4. If any issues occur, refer to the Troubleshooting section below.
+
+### Troubleshooting GitHub Actions
+
+If you encounter any issues with the GitHub Actions workflow, follow these troubleshooting steps:
+1. Double-check that the required environment variables and secrets are properly configured.
+2. Review the workflow logs for any error messages or failures.
+3. Ensure that the dependencies and setup steps in the workflow file are correct and up to date.
+4. Test the workflow locally to replicate the issue and debug any errors before pushing the code.
 
 If you wish to install the OpenBB Terminal or the OpenBB SDK, please use one of the following options:
 
