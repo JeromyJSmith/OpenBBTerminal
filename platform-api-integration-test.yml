@@ -1,0 +1,51 @@
+name: Platform API Integration Test
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results
+
+      - name: Publish test coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage-report
+
+      - name: Deploy to PyPI
+        uses: pypa/gh-action-pypi-publish@v2
+        with:
+          username: ${{ secrets.PYPI_USERNAME }}
+          password: ${{ secrets.PYPI_PASSWORD }}
+          repository: pypi
+
+      - name: Deploy to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: username/repo:latest
