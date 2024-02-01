@@ -1,0 +1,74 @@
+---
+title: Installation
+---
+
+## Prerequisites
+
+Before installing the OpenBB Terminal, ensure that you have the following prerequisites:
+
+- Python 3.11 or higher
+- Pip package manager
+
+## Updating the Package Manager
+
+To ensure that the package manager is up to date, run the following command:
+
+```console
+pip install --upgrade pip
+```
+
+## Creating and Activating a New Environment
+
+It is recommended to create a new environment before installing the OpenBB Terminal. This helps to isolate the Terminal and its dependencies from other Python packages on your system. Follow these steps to create and activate a new environment:
+
+1. Open a terminal or command prompt.
+2. Run the following command to create a new environment named "openbb-env":
+
+   ```console
+   conda create -n openbb-env python=3.11
+   ```
+
+   This will create a new environment with Python 3.11 installed.
+
+3. Activate the new environment by running the following command:
+
+   ```console
+   conda activate openbb-env
+   ```
+
+   This will activate the "openbb-env" environment.
+
+## Installing the OpenBB Terminal
+
+To install the latest version of the OpenBB Terminal, run the following command:
+
+```console
+pip install --upgrade openbb
+```
+
+This will install the core OpenBB Terminal.
+
+After installing the OpenBB Terminal, you can import it in your Python code using the following statement:
+
+```python
+import openbb
+```
+
+Make sure to import the necessary modules and functions from the Terminal for your specific use case.
+
+## Post-Installation
+
+After a fresh installation or when installing/uninstalling extensions, it is recommended to rebuild the Python interface. This can be done automatically, but you can also trigger it manually if needed. Start a Python session and import the OpenBB Terminal:
+
+```python
+import openbb
+
+# Manually trigger the build
+openbb.build()
+```
+
+Restart the Python interpreter and you can start using the OpenBB Terminal.
+
+## Documentation
+
+For more detailed information and examples on using the OpenBB Terminal, refer to the [official documentation](https://openbb-finance.github.io/OpenBBTerminal/).
