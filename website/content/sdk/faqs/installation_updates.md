@@ -1,7 +1,7 @@
 ---
 title: Installation and Updates
 sidebar_position: 1
-description: This page provides detailed instructions for the installation and updating
+description: This page provides detailed instructions for the installation and updating processes for the OpenBB SDK, provides detailed instructions for the installation and updating
   processes for software, addressing frequently encountered installation issues. These
   instructions include resolving Microsoft Visual C++ 14.0 dependencies, benefits
   of using Miniconda for package management, methods to update installations, and
@@ -43,7 +43,7 @@ There are certain dependencies which are sourced exclusively from the `conda-for
 
 The code is constantly being updated with new features and bug fixes. The process for updating will vary by the installation type:
 
-- For a `pip` installation, when a new version is published: `pip install -U openbb[all]`
+- For a `pip` installation, when a new version is published: `pip install --upgrade openbb[all]`
 - Upgrade a cloned version of the GitHub repo with:
 
 ```console
