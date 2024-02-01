@@ -1,0 +1,35 @@
+name: OpenBB Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install --upgrade pip
+
+      - name: Install OpenBB SDK
+        run: pip install --upgrade openbb
+
+      - name: Install OpenBB Terminal
+        run: pip install --upgrade openbb-terminal
+
+      - name: Run tests
+        run: pytest
+
+      - name: Deploy
+        run: |
+          # Add deployment steps here
